@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY esp-rien '<choice xmlns="http://www.tei-c.org/ns/1.0"><orig> </orig><reg/></choice>'>
+<!ENTITY rien-esp '<choice xmlns="http://www.tei-c.org/ns/1.0"><orig/><reg> </reg></choice>'>
+
+<!ENTITY apomod '&#700;'>
+<!ENTITY emacr '&#275;'>
+<!ENTITY er '&#859;'>
+<!ENTITY esse '&#8776;'>
+<!ENTITY et '&#8266;'>
+<!ENTITY etiam '&#42859;'>
+<!ENTITY imacr '&#299;'>
+<!ENTITY isup '&#869;'>
+<!ENTITY lstrok '&#322;'>
+<!ENTITY middot '&#183;'>
+<!ENTITY mmacrmed '&#58808;'>
+<!ENTITY nmacrmed '&#58844;'>
+<!ENTITY omacr '&#333;'>
+<!ENTITY orumlig '&#61370;'>
+<!ENTITY osup '&#870;'>
+<!ENTITY pbardes '&#42833;'>
+<!ENTITY pflour '&#42835;'>
+<!ENTITY qbardes '&#42839;'>
+<!ENTITY umacr '&#363;'>
+<!ENTITY ur '&#7633;'>
+<!ENTITY usmod '&#42864;'>
+<!ENTITY usup '&#871;'>
+
+
+
+ 
+

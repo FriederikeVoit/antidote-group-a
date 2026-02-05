@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!DOCTYPE TEI SYSTEM "my_dtd.dtd">
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>De Sacramento</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <cb/>
+         <p>
+         <lb/><choice>
+            <abbr>Sequit<am>&#7633;</am></abbr>
+            <expan>Sequitur</expan>
+            </choice>
+            de 
+            <choice>
+               <abbr>effc<am></am>ibus</abbr>
+               <expan>effectibus</expan>
+            </choice> 
+            <choice>
+               <abbr>cor<am>&#42833;</am>is</abbr>
+               <expan>corporis</expan>
+            </choice>
+         <lb/><choice>
+               <abbr>xpi</abbr>
+               <expan>christi</expan>
+            </choice> sicut dicit Reymun
+         <lb/>dus. Hoc sacramentum
+         <lb/><choice>
+            <abbr>cor<am>&#42833;</am>is</abbr>
+               <expan>corporis</expan>
+               </choice> 
+            <choice> 
+               <abbr>xpi</abbr> 
+               <expan> christi</expan> 
+            </choice> proficit ad <choice>
+               <abbr>et<am>&#859;</am>ni</abbr>
+               <expan>eterni</expan>
+            </choice>
+         <lb/>tatem et immortalitatem
+         <lb/> digne <choice>
+            <abbr>sumentibs</abbr>
+            <expan>sumentibus</expan>
+         </choice> 
+            <choice>
+               <abbr>ec<am>&#870;</am></abbr>
+               <expan>econtrario</expan>
+            </choice> 
+            <choice>
+               <abbr>Ap<am>&#870;</am></abbr>
+               <expan>Apostolos</expan>
+            </choice>
+         <lb/>Probet audtem se 
+            <choice>
+               <abbr>ip<am>&#58808;</am></abbr>
+               <expan>ipsum</expan>
+         </choice>
+            <choice>
+               <abbr>h<am>&#333;</am></abbr>
+               <expan>homo</expan>
+            </choice>
+         <lb/>et sic intelligitur 
+            <choice>
+               <abbr>qd<am>&#700;</am></abbr>
+               <expan>quod</expan>
+            </choice> 
+            <choice>
+               <abbr>d<am>&#61524;</am></abbr>
+               <expan>dicitur</expan>
+            </choice>
+            <choice>
+               <abbr>dilig&#58844;ter</abbr>
+               <expan>diligenter</expan>
+            </choice>
+         <lb/>
+            <choice>
+               <abbr>consid<am>&#859;</am>a</abbr>
+               <expan>considera</expan>
+            </choice> que tibi
+            <choice>
+               <abbr>apponut<am>&#7633;</am></abbr>
+               <expan>apponuntur</expan>
+            </choice>
+         <lb/><choice>
+            <abbr><am>&#183;</am>S<am>&#183;</am></abbr>
+            <expan>Scilicet</expan>
+         </choice> sicut est hostia 
+            <choice>
+            <abbr>xpi</abbr>
+            <expan>christi</expan>
+            </choice>. 
+            <choice>
+               <abbr>U<am>&#58844;</am></abbr>
+               <expan>Unde</expan>
+            </choice>
+         <lb/><choice>
+            <abbr>v<am>&#859;</am></abbr>
+            <expan>versus</expan>
+         </choice>. Candida triticea te
+         <lb/>nuis non magna 
+            <choice>
+               <abbr>rot<am>&#363;</am></abbr>
+            <expan>rotun</expan>
+         </choice>
+         <lb/>da.
+            <choice>
+               <abbr>Ex<am>&#42833;</am>s</abbr>
+            <expan>Expers</expan>
+         </choice> 
+            fermenti non
+         <lb/>falsa sit hostia 
+            <choice>
+               <abbr>xpi</abbr>
+               <expan>christi</expan>
+            </choice>
+            <choice>
+               <abbr>glo<am>&#869;&#870;</am></abbr>
+               <expan>glorsatio</expan>
+            </choice>
+         <lb/>candida 
+            <choice>
+               <abbr>sg<am>&#869;</am>t<am>&#870;</am></abbr>
+               <expan>significat</expan>
+            </choice>
+            castitatem.
+         <lb/>sic tu debes 
+            <choice>
+               <abbr>=</abbr>
+            <expan>esse</expan>
+         </choice> candidus
+         <lb/> <choice>
+            <abbr><am>&#183;</am>i<am>&#183;</am></abbr>
+            <expan>id est</expan>
+         </choice> castus 
+            <choice>
+               <abbr>cor<am>&#42833;</am>e</abbr>
+               <expan>corpore</expan>
+            </choice> corde Tri
+         <lb/>ticea 
+            <choice>
+               <abbr>tritic</abbr>
+               <expan>triticum</expan>
+            </choice> 
+            <choice>
+               <abbr>dulcissim<am>&#363;</am></abbr>
+               <expan>dulcissimum</expan>
+            </choice>
+            <lb/><choice>
+               <abbr>&#42859;</abbr>
+               <expan>etiam</expan>
+            </choice> 
+            <choice>
+               <abbr>su<am>&#42833;</am></abbr>
+               <expan>super</expan>
+            </choice>
+            farra ita tu debes
+            <lb/> <choice>
+               <abbr>=</abbr>
+               <expan>esse</expan>
+            </choice> dulcis et mansuetus
+            <lb/>Tenuis 
+            <choice>
+               <abbr><am>&#183;</am>i<am>&#183;</am></abbr>
+               <expan>id est</expan>
+            </choice> 
+            <choice>
+               <abbr>tem<am>&#42833;</am>atus</abbr>
+               <expan>temperatus</expan>
+            </choice> cibo
+            <lb/> <choice>
+               <abbr>&#8266;</abbr>
+               <expan>et</expan>
+            </choice> potu. Non magna <choice>
+               <abbr><am>&#183;</am>i<am>&#183;</am></abbr>
+               <expan>id est</expan>
+            </choice> hu
+          <lb/> <choice>
+               <abbr>mil</abbr>
+               <expan>milis</expan>
+            </choice>
+            <choice>
+               <abbr>n<am>&#333;</am></abbr>
+               <expan>non</expan>
+            </choice>
+            <choice>
+               <abbr>su<am>&#42833;</am>b</abbr>
+               <expan>superbus</expan>
+            </choice> 
+            <choice>
+               <abbr>Rot<am>&#363;</am>da</abbr>
+               <expan>Rotunda</expan>
+            </choice> 
+            <choice>
+               <abbr>sic<am>&#700;</am></abbr>
+               <expan>sicut</expan>
+            </choice>
+            <lb/> <choice>
+               <abbr>for<am>&#869;&#870;</am></abbr>
+               <expan>formatio</expan>
+            </choice> 
+            <choice>
+               <abbr>rot<am>&#363;</am>da</abbr>
+               <expan>rotunda</expan>
+            </choice> 
+            <choice>
+               <abbr><am>&#8266;</am></abbr>
+               <expan>etiam</expan>
+            </choice> 
+            <choice>
+               <abbr>mobil<am>&#700;</am></abbr>
+               <expan>mobilis</expan>
+            </choice> 
+            ita
+            <lb/>tu debes
+            <choice>
+               <abbr>mobil<am>&#700;</am></abbr>
+               <expan>mobilis</expan>
+            </choice>
+            <choice>
+               <abbr><am>&#8776;</am></abbr>
+               <expan>esse</expan>
+            </choice> 
+            ad divi
+            <lb break = "no"/>
+            <choice>
+               <abbr>n<am>&#363;</am></abbr>
+               <expan>num</expan>
+            </choice> 
+            <choice>
+               <abbr>offici<am>&#363;</am></abbr>
+               <expan>officium</expan>
+            </choice> 
+            <choice>
+               <abbr><am>&#8266;</am></abbr>
+               <expan>et</expan>
+            </choice> 
+            ad 
+            <choice>
+               <abbr><am>&#59009;&#42859;</am></abbr>
+               <expan>quedam</expan>
+            </choice> 
+            bona
+            <lb/> facienda
+            <choice>
+               <abbr>ex<am>&#42833;</am>s</abbr>
+               <expan>expers</expan>
+            </choice> 
+            <choice>
+               <abbr>f<am>&#859;</am>menti</abbr>
+               <expan>fermenti</expan>
+            </choice> 
+            <choice>
+               <abbr>f<am>&#859;</am></abbr>
+               <expan>fer</expan>
+            </choice> 
+            <lb break = "no"/> 
+            <choice>
+               <abbr>ment<am>&#363;</am></abbr>
+               <expan>mentum</expan>
+            </choice> 
+            <choice>
+               <abbr>sig<am>&#869;&#700;</am>t</abbr>
+               <expan>significat</expan>
+            </choice> 
+            <choice>
+               <abbr>invidi<am>&#257;</am></abbr>
+               <expan>invidiam</expan>
+            </choice>
+            et
+            <lb/> iram 
+            <choice>
+               <abbr><am>&#183;</am>i<am>&#183;</am></abbr>
+               <expan>id est</expan>
+            </choice>
+            <choice>
+               <abbr>since<am>&#61370;</am></abbr>
+               <expan>sincerum</expan>
+            </choice>
+            cor debes
+            <lb/> 
+            <choice>
+               <abbr>ln<am>&#275;</am></abbr>
+               <expan>plene</expan>
+            </choice>
+            ad deum et 
+            <choice>
+               <abbr><am>&#42835;</am>rim<am>&#363;</am></abbr> 
+               <expan>proximum</expan>
+            </choice>
+            <lb/>
+            <choice>
+               <abbr>tu<am>&#363;</am></abbr> 
+               <expan>tuum</expan>
+            </choice>.
+            Non falsa 
+            <choice>
+               <abbr><am>&#183;</am>i<am>&#183;</am></abbr>
+               <expan>id est</expan>
+            </choice>
+            sine cupi
+            <lb/> ditate et avaricia. Unde
+            <lb/> <choice>
+               <abbr>Io<am>&#859;&#42864;</am></abbr>
+               <expan>Ieronimus</expan>
+            </choice> Non 
+            <choice>
+               <abbr>mem<am>&#299;</am></abbr> 
+               <expan>menimi</expan>
+            </choice>
+            me legisse
+            <lb/> <choice>
+               <abbr>aliqu<am>&#275;</am></abbr> 
+               <expan>aliquem</expan>
+            </choice>
+            <choice>
+               <abbr>e<am>&#275;</am></abbr> 
+               <expan>esse</expan>
+            </choice>
+            <choice>
+               <abbr>dampnat<am>&#363;</am></abbr>
+               <expan>dampnatum</expan>
+            </choice>
+            qui
+            <lb/> in hoc seculo duxit  
+            <choice>
+               <abbr>vit<am>&#257;</am></abbr> 
+               <expan>vitam</expan>
+            </choice>
+            <lb/>
+            <choice>
+               <abbr>lib<am>&#859;</am>alem</abbr> 
+               <expan>liberalem</expan>
+            </choice>
+            <choice>
+               <abbr><am>&#183;</am>i<am>&#183;</am></abbr>
+               <expan>id est</expan>
+            </choice> 
+            largam 
+            <choice>
+               <abbr>vol<am>&#363;</am></abbr> 
+               <expan>volun</expan>
+            </choice>
+            <lb break = "no"/> tatem 
+            <choice>
+               <abbr>o<am>&#42833;</am>e</abbr> 
+               <expan>opere</expan>
+            </choice>
+            <choice>
+               <abbr><am>&#8266;</am>t<am>&#859;</am></abbr> 
+               <expan>et cetera</expan>
+            </choice> 
+            <choice>
+               <abbr>Sequit<am>&#7633;</am></abbr> 
+               <expan>Sequitur</expan>
+            </choice>
+            <lb/> ut dicit 
+            <choice>
+               <abbr>ecc<am>&#700;</am></abbr> 
+               <expan>ecclesiasticum</expan> 
+            </choice>.
+            Digne su
+            <lb break = "no"/>mens hoc 
+            <choice>
+               <abbr>sacrament<am>&#363;</am></abbr> 
+               <expan>sacramentum</expan>
+            </choice>
+            <lb/> xiii. 
+            <choice>
+               <abbr>B<am>&#58844;</am>dic<am>&#333;</am>nes</abbr> 
+               <expan>Bendictiones</expan>
+            </choice>
+            accipit
+            <lb/> 
+            <choice>
+               <abbr>u<am>&#58844;</am></abbr> 
+               <expan>unde</expan>
+            </choice> 
+            <choice>
+               <abbr>v<am>&#859;</am></abbr> 
+               <expan>versus</expan>
+            </choice>.
+            Augeo misceo mi
+            <lb break = "no"/>tigo reprimo terreo 
+            <choice>
+               <abbr>p<am>&#7633;</am>go</abbr> 
+               <expan>purgo</expan>
+            </choice>. 
+            <lb/> Igneo lumino duplico
+            <lb/>
+            <choice>
+               <abbr>f<am>&#859;</am>mo</abbr> 
+               <expan>fermo</expan>
+            </choice> 
+            <choice>
+               <abbr><am>&#42835;</am>pinq<am>&#870;</am></abbr> 
+               <expan>propinquo</expan>
+            </choice>
+            duco. Et vi
+            <lb break = "no"/>tam dono tot mensa 
+            <choice>
+               <abbr>f<am>&#859;</am></abbr> 
+               <expan>fer</expan>
+            </choice>
+            <lb break = "no"/>cula pono. Glosa augeo
+            <lb/> 
+            <choice>
+               <abbr><am>&#183;</am>s<am>&#183;</am></abbr> 
+               <expan> scilicet</expan>
+            </choice>
+            <choice>
+               <abbr>gra<am>&#61524;</am></abbr> 
+               <expan>graciam</expan>
+            </choice> in 
+            <choice>
+               <abbr>p<am>&#5884;</am>ti</abbr> 
+               <expan>presenti</expan>
+            </choice> et 
+            <choice>
+               <abbr>gloria<am>&#257;</am></abbr> 
+               <expan>gloriam</expan>
+            </choice>
+            <lb/> in 
+            <choice>
+               <abbr>fut<am>&#7633;</am>o</abbr>
+               <expan>futuro</expan>
+            </choice>. Miteo 
+            <choice>
+               <abbr><am>&#183;</am>i<am>&#183;</am></abbr>
+               <expan>id est</expan>
+            </choice>
+            <choice>
+               <abbr>micior<am>&#275;</am></abbr> 
+               <expan>miciorem</expan>
+            </choice>
+            <lb/> facio Mitigo 
+            <choice>
+               <abbr><am>&#183;</am>s<am>&#183;</am></abbr> 
+               <expan>scilicet</expan>
+            </choice> 
+            <choice>
+               <abbr>temptac<am>&#333;</am></abbr> 
+               <expan>temptacio</expan>
+            </choice>
+            <lb/> nes Reprimo 
+            <choice>
+               <abbr><am>&#183;</am>i<am>&#183;</am></abbr>
+               <expan>id est</expan>
+            </choice> malum 
+            <lb/> 
+            <choice>
+               <abbr>afft<am>&mmacrmed;</am></abbr> 
+               <expan>affectum</expan>
+            </choice> 
+            <choice>
+               <abbr><am>&et;</am></abbr> 
+               <expan>et</expan>
+            </choice> 
+            <choice>
+               <abbr>desideri<am>&umacr;</am></abbr> 
+               <expan>desiderium</expan>
+            </choice> carnis
+            <lb/> Terreo 
+            <choice>
+               <abbr><am>&#183;</am>s<am>&#183;</am></abbr> 
+               <expan>scilicet</expan>
+            </choice> demones de 
+            <choice>
+               <abbr>nll<am>&omacr;</am></abbr> 
+               <expan>nullo</expan>
+            </choice>
+            <lb/> 
+            <choice>
+               <abbr><am>&#183;</am>n<am>&#183;</am></abbr> 
+               <expan>enim</expan>
+            </choice> 
+            <choice>
+               <abbr>t<am>&#58808;</am></abbr> 
+               <expan>tamtum</expan>
+            </choice> 
+            <choice>
+               <abbr>terrent<am>&ur;</am></abbr> 
+               <expan>terrentum</expan>
+            </choice> demones
+            <lb/>sicut de 
+            <choice>
+               <abbr>cor<am>&pbardes;</am>e</abbr> 
+               <expan>corpore</expan>
+            </choice> 
+            <choice>
+               <abbr>Xp<am>&imacr;</am></abbr> 
+               <expan>Christus</expan>
+            </choice>. Unde
+            <lb/> 
+            <choice>
+               <abbr>Chrisosto<am>&usmod;</am></abbr> 
+               <expan>Chrisostomus</expan>
+            </choice>. Corpus 
+            <choice>
+               <abbr>x<am>&isup;</am></abbr> 
+               <expan>Christus</expan>
+            </choice> fu
+            <lb/> gat demones vocat ange
+            
+            <cb/>
+            <lb/>los et
+            <choice>
+               <abbr>m<am>&er;</am>ito</abbr>
+               <expan>merito</expan>
+            </choice> 
+            qiua ubi
+            <choice>
+               <abbr>do<am>&usmod;</am></abbr>
+               <expan>domus</expan>
+            </choice>
+            <lb/>  <choice>
+               <abbr>eor<am>&umacr;</am></abbr>
+               <expan>eorum</expan>
+            </choice> 
+            ibi et
+            <choice>
+               <abbr>angli<am>&isup;</am></abbr>
+               <expan>angeli</expan>
+            </choice> 
+            eius
+            <lb/> Purgo
+            <choice>
+               <abbr><am>&#183;</am>s<am>&#183;</am></abbr> 
+               <expan>scilicet</expan>
+            </choice> 
+            venialia 
+            <choice>
+               <abbr>p<am>&#61523;</am>ta</abbr> 
+               <expan>peccata</expan>
+            </choice> 
+            <lb/> Igneo
+            <choice>
+               <abbr><am>&#183;</am>s<am>&#183;</am></abbr> 
+               <expan>scilicet</expan>
+            </choice> 
+            affecm 
+            <choice>
+               <abbr><am>&et;</am></abbr> 
+               <expan>et</expan>
+            </choice> 
+            <choice>
+               <abbr>sp<am>&mmacrmed;</am></abbr>
+               <expan>spiritum</expan>
+            </choice> 
+            tu
+            <lb/> um 
+            <choice>
+               <abbr>tu<am>&umacr;</am></abbr>
+               <expan>tuum</expan>
+            </choice> 
+            ad
+            <choice>
+               <abbr>bonu<am>&umacr;</am></abbr>
+               <expan>bonum</expan>
+            </choice> 
+            <choice>
+               <abbr>lu<am>&imacr;</am>no</abbr>
+               <expan>lumino</expan>
+            </choice> 
+            <lb/>  <choice>
+               <abbr><am>&#183;</am>s<am>&#183;</am></abbr> 
+               <expan>scilicet</expan>
+            </choice> 
+            in telectum
+            <choice>
+               <abbr>tu<am>&umacr;</am></abbr>
+               <expan>tuum</expan>
+            </choice> 
+            duplico
+            <lb/>  <choice>
+               <abbr><am>&#183;</am>i<am>&#183;</am></abbr>
+               <expan>id est</expan>
+            </choice>
+            <choice>
+               <abbr>m<am>&lstrok;</am>tiplico</abbr>
+               <expan>multiplico</expan>
+            </choice> 
+            hic
+            <choice>
+               <abbr>mi<am>&er;</am>t<am>&umacr;</am></abbr>
+               <expan>meritum</expan>
+            </choice>
+            <lb/> 
+            <choice>
+               <abbr><am>&et;</am></abbr>
+               <expan>Et</expan>
+            </choice> illic
+            <choice>
+               <abbr>mi<am>&er;</am>tum</abbr>
+               <expan>meritum</expan>
+            </choice> 
+            <choice>
+               <abbr>f<am>&er;</am>rmo</abbr>
+               <expan>fermo</expan>
+            </choice> 
+            <choice>
+               <abbr><am>&#183;</am>s<am>&#183;</am></abbr> 
+               <expan>scilicet</expan>
+            </choice>
+            <choice>
+               <abbr><am>&imacr;</am></abbr>
+               <expan>in</expan> 
+            </choice>
+            <lb/>te virtutes 
+            <choice>
+               <abbr>prinq<am>&osup;</am></abbr>
+               <expan>propinquo</expan>
+            </choice> 
+            <choice>
+               <abbr><am>&#183;</am>i<am>&#183;</am></abbr>
+               <expan>id est</expan>
+            </choice> 
+            <choice>
+               <abbr>e<am>&er;</am>o</abbr>
+               <expan>ero</expan>
+            </choice> 
+            <lb/>tibi famliaris in 
+            <choice>
+               <abbr>a<am>&imacr;</am>a</abbr>
+               <expan>anima</expan>
+            </choice> 
+            <lb/> tua. Duco  
+            <choice>
+               <abbr><am>&#183;</am>s<am>&#183;</am></abbr> 
+               <expan>scilicet</expan>
+            </choice> 
+            de miseria
+            <lb/>
+            <choice>
+               <abbr><am>&et;</am></abbr>
+               <expan>et</expan>
+            </choice> luctu ad
+            <choice>
+               <abbr>gaudi<am>&umacr;</am></abbr>
+               <expan>gaudium</expan>
+            </choice> do
+            <lb/>no  <choice>
+               <abbr><am>&#183;</am>s<am>&#183;</am></abbr> 
+               <expan>scilicet</expan>
+            </choice> 
+            vitam eternam
+            <lb/>A M E N
+         </p>
+      </body>
+  </text>
+</TEI>
