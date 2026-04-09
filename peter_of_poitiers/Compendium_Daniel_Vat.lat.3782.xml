@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Daniel's prophecies in Compendium historiae genalogia Christi, ms. Vat.lat.
+               3782</title>
+            <respStmt>
+               <resp>Semi-diplomatic transcription (training exercise, ANTIDOTE project)</resp>
+               <persName>Erica Cattelan</persName>
+            </respStmt>
+         </titleStmt>
+
+         <publicationStmt>
+            <p>Semi-diplomatic transcription conducted for coursework purposes within the ANTIDOTE
+               project.</p>
+         </publicationStmt>
+
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country>Vatican City</country>
+                  <repository>Vatican Apostolic Library</repository>
+                  <idno>Vat.lat. 3782</idno>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc form="roll">
+                     <supportDesc>
+                        <support>pergamena</support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+
+               <msContents>
+                  <msItem>
+                     <author>Petrus Pictaviensis</author>
+                     <title type="uniform">Compendium historiae genealogia Christi</title>
+                     <title type="alt">Origo Christi per historias biblie</title>
+                     <textLang mainLang="la">Latin</textLang>
+                  </msItem>
+               </msContents>
+
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <listPerson>
+               <person xml:id="prophet_Daniel">
+                  <persName> Daniel</persName>
+               </person>
+               <person xml:id="king_Nabucodonosor">
+                  <persName>Nabucodonosor</persName>
+               </person>
+               <person xml:id="Christus">
+                  <persName>Christus</persName>
+               </person>
+               <person xml:id="king_Balthasar">
+                  <persName>Balthasar</persName>
+               </person>
+               <person xml:id="emperor_Alexander">
+                  <persName>Alexandro</persName>
+               </person>
+               <person xml:id="king_Anthiocus_Epiphanes">
+                  <persName>Anthiocus Epiphanes</persName>
+               </person>
+               <person xml:id="king_Cyrus">
+                  <persName>Cyrus</persName>
+               </person>
+               <person xml:id="king_Darius">
+                  <persName>Darius</persName>
+               </person>
+               <person xml:id="archangel_Gabriel">
+                  <persName>Gabriel</persName>
+               </person>
+               <person xml:id="governator_Neemia">
+                  <persName>Neemia</persName>
+               </person>
+               <person xml:id="Antichristus">
+                  <persName>Antichristus</persName>
+               </person>
+               <person xml:id="Anania">
+                  <persName>Anania</persName>
+               </person>
+               <person xml:id="Azaria">
+                  <persName>Azaria</persName>
+               </person>
+               <person xml:id="Misael">
+                  <persName>Misael</persName>
+               </person>
+               <person xml:id="prophet_Neemia">
+                  <persName>Neemia</persName>
+               </person>
+               <person xml:id="emperor_Vespasianus">
+                  <persName>Vespasianus</persName>
+               </person>
+               <person xml:id="emperor_Titus">
+                  <persName>Titus</persName>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+   </teiHeader>
+
+   <text>
+      <body>
+         <p>
+            <persName ref="#prophet_Daniel">
+               <hi rend="underline rubricated">
+                  <hi rend="initial large rubricated">P</hi>rophetans </hi> Daniel </persName>
+            <ex>propheta</ex> in caldea sub <persName ref="#king_Nabucodonosor"
+                  >nabuc<ex>odonosor</ex></persName>
+            <ex>tempore</ex> captivitate babilo<ex>n</ex>ie vidit X visiones <hi
+               rend="initial rubricated">q</hi><ex>arum</ex>
+            <hi rend="initial rubricated">t</hi>res vidit sub <persName ref="#king_Nabucodonosor"
+               >nabucodonosor </persName>
+            <ex>quarta</ex> sub <persName ref="#king_Balthasar"> balthasar</persName>, <hi
+               rend="initial rubricated">d</hi>uas sub <persName ref="#king_Cyrus">cyro</persName>
+            et duas sub <persName ref="#king_Darius">Dario rege
+               p<ex>er</ex>sa<ex>rum</ex>.</persName>
+            <hi rend="initial rubricated">P</hi>rima<ex>m</ex> visione<ex>m</ex>m vidit de statua
+               quadrip<ex>ar</ex>tita et lapide minimo c<ex>re</ex>scente
+               sig<ex>ni</ex>ficante<ex>quatu</ex>or regna a <persName ref="#Christus"
+                  ><ex>christo</ex></persName> co<ex>m</ex>minuenda. <hi rend="underline red"
+                  >Dan<ex>ielis</ex> s<ex>ecund</ex>o</hi> cap<ex>i</ex>t<ex>ul</ex>o. <hi
+               rend="initial rubricated">S</hi>ecundam de angelo quilib<ex>er</ex>avit
+            <ex>tres</ex>tres pu<ex>er</ex>os de fornace q<ex>ui</ex>noluer<ex>ant</ex>ant adorare
+            statuam auream er<ex>ec</ex>ectam a <persName ref="#king_Nabucodonosor">
+                  Nabuc<ex>odonosor</ex></persName> in ca<ex>m</ex>pi duran <ex>quorum</ex>
+               no<ex>m</ex>i<ex>n</ex>na <persName>anania</persName>, <persName>azaria</persName>,
+               <persName>misael</persName>. <hi rend="undeline red"> Dan<ex>ielis</ex>
+               <ex>tertio</ex></hi> c<ex>apitulo</ex>
+            <hi rend="initial rubricated">T</hi>ertiam que est ep<ex>ist</ex>t<ex>ul</ex>a <persName
+               ref="#king_Nabucodonosor">regis</persName> qua narrat se sub spe<ex>cie</ex> arboris
+               visu<ex>m</ex> ob <ex>super</ex>biam suam in bove<ex>m</ex> et leone<ex>m</ex>
+               no<ex>n</ex> cor<ex>por</ex>alitater sed alienatio<ex>n</ex>e mentis mutatu<ex>m</ex>
+            sed p<ex>re</ex>ce <persName ref="#prophet_Daniel">danielis</persName> sanatu<ex>m</ex>
+            <hi rend="underline red"> Dan<ex>ielis</ex></hi>
+            <ex>quarto</ex> c<ex>apitulo</ex>
+            <hi rend="initial rubricated">Q</hi>uarta<ex>m</ex> sub <persName ref="#king_Balthasar"
+               >balthasar</persName> de <ex>quatu</ex>or ve<ex>n</ex>tis <ex>idest</ex>
+            a<ex>n</ex>gelis <ex>et</ex>
+            <ex>quatu</ex>or bestiis <ex>sunt</ex> leone, urso, pardo <ex>et</ex> apro
+               <ex>idest</ex>
+            <ex>quatu</ex>or regnis, et <ex>in</ex>
+            <ex>quar</ex>ta <ex>decem</ex> cornib<ex>us</ex>
+            <ex>idest</ex>
+            <ex>decem</ex> regnis, de <ex>quar</ex>ta bestia p<ex>ro</ex>cedentib<ex>us</ex>, a
+            modico cornu, <persName ref="#Antichristus"> anti<ex>christo</ex>
+            </persName>, sumendis, prophetis <ex>pre</ex> positis in adventu <persName
+               ref="#Christus"><ex>Christi</ex></persName>
+            <ex>quatu</ex>or bestiis interfectis <hi rend="undeline red">Dan<ex>ielis</ex>
+               <ex>sexto</ex></hi> c<ex>apitulo</ex>. <hi rend="initial rubricated"
+               >Q</hi>uinta<ex>m</ex> vid<ex>it</ex> sub <persName ref="#king_Balthasar"
+                  >eod<ex>em</ex></persName>de ariete h<ex>abe</ex>nte cornua imp<ex>ar</ex>ia,
+               <ex>idest</ex> de regno medo<ex>rum</ex>
+            <ex>et</ex> persa<ex>rum</ex>, <ex>et</ex> hyrco, <ex>idest</ex>
+            <persName ref="#emperor_Alexander">alexandro </persName> i<ex>n</ex> eu<ex>m</ex>
+            efferato, cui <ex>sub</ex>cresceba<ex>n</ex>t <ex>quatu</ex>or cornua, <ex>idest</ex>
+            successores <persName ref="#emperor_Alexander">alexa<ex>n</ex>ndri</persName>, de
+               <ex>quorum</ex> unico cornu crescebat, <ex>idest</ex>
+            <persName ref="#king_Anthiocus_Epiphanes">antioch<ex>us</ex>epiphanes</persName>
+            <hi rend="initial rubricated">S</hi>exta<ex>m</ex> vidit sub <persName
+               ref="#king_Balthasar">eod<ex>em</ex></persName> de destr<ex>u</ex>ct<ex>ione</ex>
+            babilonis <ex>per</ex>
+            <persName ref="#king_Cyrus">cyrum</persName> et <persName ref="#king_Darius"
+               >darium</persName>, <ex>sancta</ex> expo<ex>s</ex>ita scriptura in <ex>con</ex>vivio
+            que <ex>con</ex>tinebat: mane, techel, phares. <hi rend="underline red"
+                  >Dan<ex>ielis</ex>
+               <ex>sexto</ex></hi> c<ex>apitulo</ex>. <hi rend="initial rubricated"
+               >S</hi>eptima<ex>m</ex> vidit sub <persName ref="#king_Darius">dario</persName> de
+               ang<ex>e</ex>lo qui <persName ref="#prophet_Daniel">eu<ex>m</ex>m</persName>
+            liberavit de lacu leonu<ex>m</ex> u<ex>bi</ex>bi p<ex>re</ex>ter
+               volu<ex>n</ex>tate<ex>m</ex>
+            <persName ref="#king_Darius">regis</persName> po<ex>s</ex>it fu<ex>er</ex>at
+               <ex>quia</ex> dec<ex>re</ex>to principu<ex>m</ex> i<ex>n</ex>vidia dato de
+               petitioni<ex>bus</ex>bus no<ex>n</ex> facedis nisi a rege, ter in die ora<ex>n</ex>do
+               <persName ref="#king_Darius">darium</persName>
+            <ex>con</ex>tradixit <hi rend="undeline red">Dan<ex>ielis</ex>
+               <ex>sexto</ex></hi> c<ex>apitulo</ex>. <hi rend="initial rubricated"
+               >O</hi>ctava<ex>m</ex> vidit sub <persName ref="#king_Darius"
+               >eod<ex>em</ex>em</persName>
+            <persName ref="#archangel_Gabriel">gabriele</persName>
+            <persName ref="#prophet_Daniel">eum</persName> certificante de adventu <persName
+               ref="#Christus"><ex>christi</ex></persName>
+            <ex>post</ex> LXX ebdomades a<ex>n</ex>no<ex>rum</ex> lunariu<ex>m</ex>m et captivitate
+            finali per romanos post ad edificatio<ex>ne</ex>nem civitatis <ex>per</ex>per
+               <persName>neemiam</persName> et alios que f<ex>a</ex>cta fuit <ex>per</ex>
+            <persName ref="#emperor_Vespasianus">vespasianu<ex>m</ex></persName>et <persName
+               ref="#emperor_Titus">tytu<ex>m</ex></persName>
+            <hi rend="underline red">Dan<ex>ielis</ex>ielis</hi>
+            <ex>nono</ex> c<ex>apitulo</ex>. <hi rend="initial rubricated">N</hi>ona<ex>m</ex> vidit
+            sub <persName ref="#king_Cyrus">cyro</persName> qui ieiunans iuxta tygrim, vidit
+               viru<ex>m</ex> indutu<ex>m</ex>m baltheo, cui<ex>us</ex>us corp<ex>us</ex>us
+            crisolitus oculi lampades, facias ut fulgur erat. <hi rend="underline red"
+                  >Dan<ex>ielis</ex>
+               <ex>decimo</ex></hi>cap<ex>itulo</ex>. <hi rend="initial rubricated"
+               >D</hi>ecima<ex>m</ex> visionem vidit sub <persName ref="#king_Cyrus"
+               >eod<ex>em</ex></persName> cu<ex>m</ex> idem vir de successione regu<ex>m</ex>
+               p<ex/>er>sar<ex>rum</ex> et ab <persName ref="#emperor_Alexander">Alexandro
+            </persName> cu<ex>m</ex> suis successorib<ex>us</ex> quatuor maxi<ex>m</ex>e
+               regib<ex>us</ex> egypti et syrie et sevitia <persName ref="#king_Anthiocus_Epiphanes"
+               >antiochi epyphanes</persName> et <persName ref="#Antichristus"
+               >anti<ex>christo</ex></persName> per <ex>tempus</ex> et <ex>tempora</ex> et
+               dimidiu<ex>m</ex>
+            <ex>temporis</ex> reg<ex>na</ex>turo eu<ex>m</ex> c<ex>er</ex>tificavit. </p>
+      </body>
+   </text>
+</TEI>
