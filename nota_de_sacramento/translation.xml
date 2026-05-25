@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!DOCTYPE TEI SYSTEM "my_dtd.dtd">
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>De Sacramento</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text> 
+      <body> <p> 
+      <cb/>
+         <lb/> Following the effects of the Body of
+         <lb/> Christ. <emphasis> Just as it was said by Reymundus:
+         <lb/> "This sacrament
+         <lb/> of the Body of Chrit accomplishes
+         <lb/> enetrnity and immortality 
+         <lb/> for those who take it worthy, and the opposite [for those who don't]" </emphasis>
+         <lb/> <emphasis> The Apostle [says]:
+         <lb/> "Let a man examine himself
+         <lb/> and thus is understood what is said. Carefully 
+         <lb/> consider what is served to you
+         <lb/> certainly such as the host of Christ." </emphasis> Hence
+         <lb/> the verse: <emphasis> White, wheaten, thin
+         <lb/> not large, round,
+         <lb/> without yeast, not
+         <lb/> false, the host of Christ should be. </emphasis> Gloss:
+         <lb/> <i>White:</i> signifies chastity,
+         <lb/> thus you should be white
+         <lb/> that is chaste in body and heart.
+         <lb/> <i>Wheaten:</i> wheat is the sweetest
+         <lb/> of all grain, so you should
+         <lb/> be sweet and gentle.
+         <lb/> <i>Thin</i>: that is moderate in food
+         <lb/> and drink. <i>Not large:</i> that is
+         <lb/> humble, not proud. <i>Round:</i> such as
+         <lb/> a round shape is moveable so
+         <lb/> you should be moveable for the divine
+         <lb/> office and for [doing certain] good
+         <lb/> deeds. <i>Without yeast:</i>
+         <lb/> yeast signifies envy and
+      <cb/>
+         <lb/> anger, that is [you] should 
+         <lb/> have a [sincere heart] for God and the close ones
+         <lb/> of yours. <i>Not false:</i> that is without
+         <lb/> greed and avarice. <emphasis> Hence
+         <lb/> Jerome [says]: I do not remember having read
+         <lb/> of anyone being damned who
+         <lb/> in this world led a life
+         <lb/> [that was] decent. That is [to have a] great will
+         <lb/> to work and so on. </emphasis> <emphasis> Following
+         <lb/> as Ecclesiasticus says: [Who] worthily 
+         <lb/> takes the sacrament 
+         <lb/> receives thirteen blessings. </emphasis>
+         <lb/> <emphasis> Hence the verse: I increase, I mingle, I sooth
+         <lb/> I restrain, I terrify, I cleanse 
+         <lb/> I ignite, I enlighten, I double
+         <lb/> I strengthen, I draw near, I lead, and 
+         <lb/> I give life. Upon the table so many dishes
+         <lb/> I place. </emphasis> Gloss: <i>I increase:</i>
+         <lb/> namely grace in the present and glory 
+         <lb/> in the future. <i>I mingle:</i> that is I [make one] gentler
+         <lb/> <i>I sooth:</i> namely temptations.
+         <lb/> <i>I reastrain:</i> that is evil
+         <lb/> affection and the desire of the flesh.
+         <lb/> <i>I terrify:</i> namely demons, for nothing
+         <lb/> do the demons fear more
+         <lb/> than the Body of Christ. <emphasis> Hence 
+         <lb/> Chrystostomus says: The Body of Christ repels 
+         <lb/> demons and calls angels </emphasis>
+      <cb/>
+         <lb/> and rightly so, because where [their] Lord
+         <lb/> is, his agnels are [too]. 
+         <lb/> <i>I cleanse:</i> namely venial sins.
+         <lb/> <i>I ignite:</i> namely [your] affection and spirit
+         <lb/> toward good. <i>I enlighten:</i> 
+         <lb/> namely your understating. <i>I double:</i>
+         <lb/> that is I multiply merit here
+         <lb/> and merit there. <i>I strengthen:</i> namely 
+         <lb/> the virtues [within] you. <i>I draw near:</i> that is
+         <lb/> I shall be familiar in [your] soul. 
+         <lb/> <i>I lead:</i> namely out of misery
+         <lb/> and mourning to joy. 
+         <lb/> <i>I give:</i> namely eternal life.
+         <lb/> A M E N
+       </p> </body>
+</text>
+</TEI>
