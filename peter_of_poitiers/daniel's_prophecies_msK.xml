@@ -80,6 +80,33 @@
                   <persName>Antichristus</persName>
                </person>
             </listPerson>
+			 <listEvent>
+				 <event xml:id="prophecy_1_2_3"> 
+					 <eventName> Daniel's first, second and third prophecies </eventName>
+				 </event>
+				 <event xml:id="prophecy_4">
+					 <eventName> Daniel's fourth prophecy </eventName>
+				 </event>
+				 <event>
+					 <event xml:id="prophecy_5">
+						 <eventName> Daniel's fifth prophecy </eventName>
+					 </event>
+					 <event xml:id="prophecy_6">
+						 <eventName> Daniel's sixth prophecy </eventName>
+					 </event>
+					 <event xml:id="prophecy_7">
+						 <eventName> Daniel's seventh prophecy </eventName>
+					 </event>
+					 <event xml:id="prophecy_8">
+						 <eventName> Daniel's eight prophecy </eventName>
+					 </event>
+					 <event xml:id="prophecy_9">
+						 <eventName> Daniel's ninth prophecy </eventName>
+					 </event>
+					 <event xml:id="prophecy_10"> 
+						 <eventName> Daniel's tenth propechy </eventName>
+					 </event>
+					 
          </particDesc>
       </profileDesc>
    </teiHeader>
