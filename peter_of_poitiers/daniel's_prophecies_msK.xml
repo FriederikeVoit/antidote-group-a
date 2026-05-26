@@ -87,14 +87,16 @@
    <text>
       <body>
          <div>
-            <p>
-               <title>
-                  <persName ref="#prophet_Daniel"> Daniel </persName></title>
-               <lb/></p>
+               <head type="title">
+                  <persName ref="#prophet_Daniel"> Daniel </persName></head>
+               <lb/>
          </div>
+		  <div >
+			   <head type="rubrica"> visio prima secunda et tertia </head>
+		  </div>
          <div>
-            <head type="rubrica"> visio prima secunda et tertia </head>
             <p>
+				<eventName ref="#prophecy_1_2_3">
                <lb/>
                <persName ref="#prophet_Daniel">Propthetans Daniel</persName> in Chaldea sub
                   <persName ref="#king_Nabucodonosor"> Nabucod<ex>onos</ex>or </persName>
@@ -108,9 +110,14 @@
                superbiam suam in bovem et leonem &#46; non corp<ex>or</ex>alit<ex>er</ex> &#46;
                   <ex>sed</ex> alienatione<ex>m</ex> m<ex>en</ex>tis mutatu<ex>m</ex> &#46;
                   <ex>sed</ex> p<ex>os</ex>t p<ex>re</ex>ce <persName ref="#prophet_Daniel"
-                  >Danielis</persName> sanatum &#46; </p>
-
-            <p> Quarta<ex>m</ex> visione<ex>m</ex> vidit sub<persName ref="king_Balthasar"
+                  >Danielis</persName> sanatum &#46;
+				</eventName>
+			</p>
+			 
+		 </div>
+		  <div>
+            <p>
+				<eventName ref="#prophecy_4"> Quarta<ex>m</ex> visione<ex>m</ex> vidit sub<persName ref="#king_Balthasar"
                   >balthasar</persName> de IIII ven<lb/>tis <ex>idest</ex> angelis <ex>et</ex> IIII
                bestiis &#46; leone &#46; urso &#46; pardo &#46; ap<ex>ro</ex>
                <lb/>
@@ -120,32 +127,46 @@
                <persName ref="#Antichristus">anti<ex>christo</ex></persName>
                subicie<ex>n</ex><lb/>dis &#46; positis in adventu <persName ref="#Christus">
                   <ex>christi</ex>
-               </persName> bestiis int<ex>er</ex>fectis</p>
-
-            <p> Quinta<ex>m</ex> vidit visionem sub eode<ex>m</ex>&#46; de ariete h<ex>abe</ex>
+               </persName> bestiis int<ex>er</ex>fectis
+			<eventName></p>
+		  </div>
+		  
+		  <div>
+            <p>
+				<eventName ref="#prophecy_5">
+				Quinta<ex>m</ex> vidit visionem sub eode<ex>m</ex>&#46; de ariete h<ex>abe</ex>
                <lb/> cornua imparia <ex>idest</ex> regno medo<ex>rum</ex>
                <ex>et</ex> p<ex>er</ex>sa<ex>rum</ex>
                <ex>et</ex> hyrco <lb/>
                <ex>idest</ex>
-               <persName ref="emperor_Alexandro">alexandro</persName> in eum efferato cui
+               <persName ref="#emperor_Alexandro">alexandro</persName> in eum efferato cui
                &#46;succrescebant IIII<ex>uor</ex>
                <lb/> cornua <ex>idest</ex> successores de qua<ex>rum</ex> uno modicu<ex>m</ex> cornu <lb/>
                <ex>idest</ex>
-               <persName ref="king_Anthiocus_Epiphanes">antiochus epiphanes</persName> &#46;</p>
-
-            <p> Sexta<ex>m</ex> vidit sub eode<ex>m</ex> de destructione babylonis &#46;<lb/>
+               <persName ref="#king_Anthiocus_Epiphanes">antiochus epiphanes</persName> &#46;
+			</eventName></p>
+		  </div>
+		  <div>
+            <p>
+				<eventName ref="#prophecy_6">
+				Sexta<ex>m</ex> vidit sub eode<ex>m</ex> de destructione babylonis &#46;<lb/>
                <ex>per</ex>
                <persName ref="king_Cyrus"> cyru<ex>m</ex></persName>
                <ex>et</ex>
-               <persName ref="king_Darius">dariu<ex>m</ex></persName>&#46; exposita
+               <persName ref="#king_Darius">dariu<ex>m</ex></persName>&#46; exposita
                sc<ex>ri</ex>ptura in convivio &#46; que co<ex>n</ex><lb/>tinebat &#46;mane
-               &#46;techel &#46;phares &#46; </p>
+               &#46;techel &#46;phares &#46; 
+				</eventName>
+			</p>
          </div>
-
+		  
+		  <div>
+            <head type="rubrica">visio quarta quinta et sexta </head>
+		  </div>
+		  
          <div>
-            <head>visio quarta quinta et sexta </head>
-         
             <p>
+				<eventName ref="#prophecy_7">
                <gap reason="first letter obmission"/>septima<ex>m</ex> vidit sub <persName
                   ref="#king_Darius">dario</persName> &#46; de ang<ex>e</ex>lo q<ex>ui</ex><lb/>
                   eu<ex>m</ex> de lacu leonu<ex>m</ex> lib<ex>er</ex>avit &#46; u<ex>bi</ex>
@@ -153,9 +174,14 @@
                   fu<ex>er</ex>at &#46; <ex>quia</ex> decreto p<ex>ri</ex>ncipi <lb/> invidia dato
                de peticionib<ex>bus</ex>
                <ex>non</ex> faciendis <ex>nisi</ex> a <persName ref="#king_Darius"
-               >rege</persName><lb/>&#46; ter orando in die <ex>con</ex>tradixerat&#46; </p>
-
-            <p> Octava<ex>m</ex> vidit sub <persName ref="#king_Darius">eodem</persName> &#46;
+               >rege</persName><lb/>&#46; ter orando in die <ex>con</ex>tradixerat&#46;
+				</eventName></p>
+		 </div>
+		  
+		  <div>
+            <p>
+				<eventName ref="#prophecy_8">
+					Octava<ex>m</ex> vidit sub <persName ref="#king_Darius">eodem</persName> &#46;
                   <persName ref="#archangel_Gabriel">gabriele</persName> eu<ex>m</ex>
                c<ex>er</ex>tifican<lb/>te de adventu <persName ref="#Christus"
                   ><ex>christi</ex></persName> &#46; <ex>post</ex> IXX ebdomades
@@ -163,20 +189,29 @@
                   fut<ex>ur</ex>a p<ex>er</ex> romanos &#46; post<lb/> edificatione<ex>m</ex>
                civitatis p<ex>er</ex>
                <persName ref="#governator_Neemia">neemiam</persName>
-               <ex>et</ex> alios&#46; </p>
+               <ex>et</ex> alios&#46;
+				</eventName></p>
          </div>
+		  
+		  <div><head type="rubrica">visio septima&#46; octava&#46;</head>
+		  </div>
 
          <div>
-            <head>visio septima&#46; octava&#46;</head>
             <p>
+				<eventName ref="#prophecy_9">
                <gap reason="omissione della prima lettera"/>nona<ex>m</ex> vidit sub <persName
                   ref="#king_Cyrus">cyro</persName>&#46; cu<ex>m</ex> ieiunans iuxta &#46; <lb/>
                uidit uirum indutum balthidi&#46; cu<ex>ius</ex> corpus
                c<ex>ri</ex>solit<ex>us</ex>&#46; <lb/>oculi lampades&#46; facies ut fulgur&#46;
                <lb/>
+				</eventName>
             </p>
-
-            <p> Decima<ex>m</ex> audiuit cu<ex>m</ex> ide<ex>m</ex> uir de successione
+		 </div>
+		  
+<div>
+            <p> 
+				<eventName ref="#prophecy_10">
+					Decima<ex>m</ex> audiuit cu<ex>m</ex> ide<ex>m</ex> uir de successione
                   regu<ex>m</ex>
                <lb/> p<ex>er</ex>sa<ex>rum</ex>&#46; <ex>et</ex>
                <persName ref="#emperor_Alexandro">alexandro</persName> cu<ex>m</ex> suiis
@@ -185,10 +220,12 @@
                   epi<lb/>phanes</persName>&#46; <ex>et</ex>
                <persName ref="#Antichristus">anti<ex>christo</ex></persName>
                <ex>per</ex> temp<ex>or</ex>a <ex>et</ex> tempus <ex>et</ex> dimidi<lb/>um
-                  temp<ex>or</ex>is regnaturo&#46; eum certificauit&#46; </p>
+                  temp<ex>or</ex>is regnaturo&#46; eum certificauit&#46; 
+				</eventName>
+			</p>
          </div>
          <div>
-            <head> visio nona decima &#46;</head>
+            <head type="rubrica"> visio nona decima &#46;</head>
          </div>
 
 
