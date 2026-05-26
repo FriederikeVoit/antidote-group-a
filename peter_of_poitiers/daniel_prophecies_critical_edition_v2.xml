@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Daniel's prophecies in Compendium historiae genalogia Christi, ms. K</title>
+            <respStmt>
+               <resp>Semi-diplomatic transcription (training exercise, ANTIDOTE project)</resp>
+               <persName>Erica Cattelan</persName>
+            </respStmt>
+         </titleStmt>
+
+         <publicationStmt>
+            <p>Semi-diplomatic transcription conducted for coursework purposes within the ANTIDOTE
+               project.</p>
+         </publicationStmt>
+
+         <sourceDesc>
+            <listWit>
+
+               <!-- Base text witness -->
+               <witness xml:id="K">
+                  <msDesc>
+                     <msIdentifier>
+                        <country>Austria</country>
+                        <settlement>Klosterneuburg</settlement>
+                        <repository>Augustiner-Chorherrenstift</repository>
+                        <idno>Cod.696</idno>
+                     </msIdentifier>
+                     <msContents>
+                        <summary>Arbor ecclesiae christianae cum glossis; Petrus Pictaviensis:
+                           Compendium historiae in genealogia Christi; Tractatulus de
+                           significatione verbi 'Domus Dei'; Petrus Comestor: Historia
+                           scholastica.</summary>
+                        <msItem n="2">
+                           <locus from="2r" to="7r">2r-7r</locus>
+                           <author>Petrus Pictaviensis</author>
+                           <title>Compendium historiae genealogia Christi</title>
+                           <textLang mainLang="la">Latin</textLang>
+                        </msItem>
+                     </msContents>
+                  </msDesc>
+               </witness>
+
+               <!-- Collation witness -->
+               <witness xml:id="Vat">
+                  <msDesc>
+                     <msIdentifier>
+                        <country>Vatican City</country>
+                        <repository>Vatican Apostolic Library</repository>
+                        <idno>Vat.lat. 3782</idno>
+                     </msIdentifier>
+                     <physDesc>
+                        <objectDesc form="roll">
+                           <supportDesc>
+                              <support>pergamena</support>
+                           </supportDesc>
+                        </objectDesc>
+                     </physDesc>
+                     <msContents>
+                        <msItem>
+                           <author>Petrus Pictaviensis</author>
+                           <title type="uniform">Compendium historiae genealogia Christi</title>
+                           <title type="alt">Origo Christi per historias biblie</title>
+                           <textLang mainLang="la">Latin</textLang>
+                        </msItem>
+                     </msContents>
+                  </msDesc>
+               </witness>
+
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+
+   <text>
+      <body>
+
+         <!-- ============================================================ -->
+         <!-- Title                                                         -->
+         <!-- ============================================================ -->
+         <div>
+            <head type="title">
+               <persName ref="#prophet_Daniel"> Daniel </persName></head>
+            <lb/>
+         </div>
+
+         <!-- ============================================================ -->
+         <!-- Rubric: visio prima secunda et tertia                        -->
+         <!-- ============================================================ -->
+         <div>
+            <head type="rubrica"> visio prima secunda et tertia </head>
+         </div>
+
+         <!-- ============================================================ -->
+         <!-- Visions 1, 2, 3                                              -->
+         <!-- ============================================================ -->
+         <div>
+            <p>
+               <eventName ref="#prophecy_1_2_3">
+                  <lb/>
+                  <persName ref="#prophet_Daniel">Propthetans Daniel</persName> in Chaldea sub
+                  <persName ref="#king_Nabucodonosor"> Nabucod<ex>onos</ex>or </persName>
+                  temp<ex>or</ex>e
+
+                  <!-- VAR 1: captivitatis (K) / captivitate babilonie (Vat) -->
+                  <app>
+                     <lem wit="#K">captivitatis</lem>
+                     <rdg wit="#Vat">captivitate babilo<ex>n</ex>ie</rdg>
+                  </app>
+
+                  &#46;vidit X vi<lb/>siones &#46; quarum tres vidit sub
+                  <persName ref="#king_Nabucodonosor"> Nabucodonosor </persName>
+
+                  <!-- VAR 2: Vat adds distribution of visions to kings; K omits entirely -->
+                  <app>
+                     <lem wit="#K"/>
+                     <rdg wit="#Vat">&#46; quarta sub <persName ref="#king_Balthasar"
+                           >balthasar</persName> duas sub <persName ref="#king_Cyrus"
+                           >cyro</persName> et duas sub <persName ref="#king_Darius"
+                           >Dario</persName> rege p<ex>er</ex>sa<ex>rum</ex></rdg>
+                  </app>
+
+                  <!-- VAR 3: K "prima de statua quadripartita lapide" /
+                              Vat "Primam visionem vidit de statua quadripartita et lapide" -->
+                  <app>
+                     <lem wit="#K">prima de <lb/> statua quadripartita lapide minimo
+                        crescente</lem>
+                     <rdg wit="#Vat">Prima<ex>m</ex> visione<ex>m</ex> vidit de statua
+                        quadrip<ex>ar</ex>tita et lapide minimo crescente</rdg>
+                  </app>
+
+                  <lb/> sig<ex>nifi</ex>cante quatuor regna a
+                  <persName ref="#Christus">christo</persName> comminuenda &#46;
+                  s<ex>e</ex>c<ex>un</ex>dam de <lb/> ang<ex>e</ex>lo qui libavit tres pueros
+
+                  <!-- VAR 4: a fornace (K) / de fornace (Vat) -->
+                  <app>
+                     <lem wit="#K">a</lem>
+                     <rdg wit="#Vat">de</rdg>
+                  </app>
+
+                  fornace &#46; qui n<ex>on</ex>
+
+                  <!-- VAR 5: K short reading / Vat adds auream, erectam a Nabucodonosor,
+                              and the names Anania, Azaria, Misael -->
+                  <app>
+                     <lem wit="#K">adorav<ex>er</ex>ant statuam campi duran</lem>
+                     <rdg wit="#Vat">noluer<ex>unt</ex> adorare statuam auream
+                        erect<ex>am</ex> a <persName ref="#king_Nabucodonosor"
+                           >Nabuc<ex>odonosor</ex></persName> in ca<ex>m</ex>pi duran &#46;
+                        <ex>quorum</ex> no<ex>m</ex>i<ex>n</ex>a <persName>anania</persName>
+                        <persName>azaria</persName>
+                        <persName>misael</persName></rdg>
+                  </app>
+
+                  &#46;
+
+                  <!-- VAR 6: Tercia (K) / Tertiam (Vat) -->
+                  <app>
+                     <lem wit="#K">Tercia</lem>
+                     <rdg wit="#Vat">Tertiam</rdg>
+                  </app>
+
+                  que est epistula regis &#46; qua narrat se sub spe<ex>cie</ex> arboris visum
+                  &#46; ob superbiam suam in bovem et leonem &#46; non
+                  corp<ex>or</ex>alit<ex>er</ex> &#46; <ex>sed</ex> alienatione<ex>m</ex>
+                  m<ex>en</ex>tis mutatu<ex>m</ex> &#46; <ex>sed</ex>
+
+                  <!-- VAR 7: K "post prece" / Vat "prece" (omits "post") -->
+                  <app>
+                     <lem wit="#K">p<ex>os</ex>t p<ex>re</ex>ce</lem>
+                     <rdg wit="#Vat">p<ex>re</ex>ce</rdg>
+                  </app>
+
+                  <persName ref="#prophet_Daniel">Danielis</persName> sanatum &#46;
+               </eventName>
+            </p>
+         </div>
+
+         <!-- ============================================================ -->
+         <!-- Vision 4                                                      -->
+         <!-- ============================================================ -->
+         <div>
+            <p>
+               <eventName ref="#prophecy_4">
+
+                  <!-- VAR 8: K "Quartam visionem vidit sub" / Vat "Quartam sub" -->
+                  <app>
+                     <lem wit="#K">Quarta<ex>m</ex> visione<ex>m</ex> vidit sub</lem>
+                     <rdg wit="#Vat">Quarta<ex>m</ex> sub</rdg>
+                  </app>
+
+                  <persName ref="#king_Balthasar">balthasar</persName> de IIII ven<lb/>tis
+                  <ex>idest</ex> angelis <ex>et</ex> IIII bestiis &#46; leone &#46; urso &#46;
+                  pardo &#46; ap<ex>ro</ex>
+                  <lb/>
+                  <ex>idest</ex> IIII regnis &#46; <ex>et</ex>
+
+                  <!-- VAR 9: K "X cornibus et X regnis de quarta bestia precedentibus" /
+                              Vat "in quarta decem cornibus idest decem regnis de quarta bestia procedentibus" -->
+                  <app>
+                     <lem wit="#K">X cornib<ex>us</ex>
+                        <ex>et</ex> X regnis &#46; de q<ex>ua</ex>rta bes<lb/>tia
+                        p<ex>re</ex>cedentib<ex>us</ex></lem>
+                     <rdg wit="#Vat"><ex>in</ex> q<ex>ua</ex>rta dec<ex>em</ex>
+                        cornib<ex>us</ex>
+                        <ex>idest</ex> dec<ex>em</ex> regnis de q<ex>ua</ex>rta bestia
+                        p<ex>ro</ex>cedentib<ex>us</ex></rdg>
+                  </app>
+
+                  a modico cornu <ex>idest</ex>
+                  <persName ref="#Antichristus">anti<ex>christo</ex></persName>
+
+                  <!-- VAR 10: K "subicIendis positis" / Vat "sumendis prophetis prepositis" -->
+                  <app>
+                     <lem wit="#K">subicie<ex>n</ex><lb/>dis &#46; positis</lem>
+                     <rdg wit="#Vat">sumendis prophetis p<ex>re</ex>positis</rdg>
+                  </app>
+
+                  in adventu <persName ref="#Christus">
+                     <ex>christi</ex>
+                  </persName>
+
+                  <!-- VAR 11: K "bestiis" / Vat "quatuor bestiis" -->
+                  <app>
+                     <lem wit="#K">bestiis</lem>
+                     <rdg wit="#Vat">quatuor bestiis</rdg>
+                  </app>
+
+                  int<ex>er</ex>fectis
+               </eventName>
+            </p>
+         </div>
+
+         <!-- ============================================================ -->
+         <!-- Vision 5                                                      -->
+         <!-- ============================================================ -->
+         <div>
+            <p>
+               <eventName ref="#prophecy_5">
+
+                  <!-- VAR 12: K "Quintam vidit visionem sub" / Vat "Quintam vidit sub" -->
+                  <app>
+                     <lem wit="#K">Quinta<ex>m</ex> vidit visionem sub</lem>
+                     <rdg wit="#Vat">Quinta<ex>m</ex> vidit sub</rdg>
+                  </app>
+
+                  eode<ex>m</ex>&#46; de ariete
+
+                  <!-- VAR 13: K "h[abe]" / Vat "h[abe]nte" -->
+                  <app>
+                     <lem wit="#K">h<ex>abe</ex></lem>
+                     <rdg wit="#Vat">h<ex>abe</ex>nte</rdg>
+                  </app>
+
+                  <lb/> cornua imparia <ex>idest</ex>
+
+                  <!-- VAR 14: K "regno" / Vat "de regno" -->
+                  <app>
+                     <lem wit="#K">regno</lem>
+                     <rdg wit="#Vat">de regno</rdg>
+                  </app>
+
+                  medo<ex>rum</ex>
+                  <ex>et</ex> p<ex>er</ex>sa<ex>rum</ex>
+                  <ex>et</ex> hyrco <lb/>
+                  <ex>idest</ex>
+                  <persName ref="#king_Alexandro">alexandro</persName> in eum efferato cui
+                  &#46;succrescebant IIII<ex>uor</ex>
+                  <lb/> cornua <ex>idest</ex>
+
+                  <!-- VAR 15: K "successores de quarum uno modicum cornu" /
+                               Vat "successores alexandri de quorum unico cornu crescebat" -->
+                  <app>
+                     <lem wit="#K">successores de qua<ex>rum</ex> uno modicu<ex>m</ex> cornu
+                        <lb/></lem>
+                     <rdg wit="#Vat">successores <persName ref="#king_Alexander"
+                           >alexand<ex>ri</ex></persName> de q<ex>uo</ex>rum unico cornu
+                        crescebat</rdg>
+                  </app>
+
+                  <ex>idest</ex>
+                  <persName ref="#king_Anthiocus_Epiphanes">antiochus epiphanes</persName> &#46;
+               </eventName>
+            </p>
+         </div>
+
+         <!-- ============================================================ -->
+         <!-- Vision 6                                                      -->
+         <!-- ============================================================ -->
+         <div>
+            <p>
+               <eventName ref="#prophecy_6"> Sexta<ex>m</ex> vidit sub eode<ex>m</ex> de
+                  destructione babylonis &#46;<lb/>
+                  <ex>per</ex>
+                  <persName ref="king_Cyrus"> cyru<ex>m</ex></persName>
+                  <ex>et</ex>
+                  <persName ref="#king_Darius">dariu<ex>m</ex></persName>&#46;
+
+                  <!-- VAR 16: K omits "sancta" / Vat adds "sancta" before "exposita" -->
+                  <app>
+                     <lem wit="#K"/>
+                     <rdg wit="#Vat">sancta</rdg>
+                  </app>
+
+                  exposita sc<ex>ri</ex>ptura in convivio &#46; que co<ex>n</ex><lb/>tinebat
+                  &#46;mane &#46;techel &#46;phares &#46;
+               </eventName>
+            </p>
+         </div>
+
+         <!-- ============================================================ -->
+         <!-- Rubric: visio quarta quinta et sexta                         -->
+         <!-- ============================================================ -->
+         <div>
+            <head type="rubrica">visio quarta quinta et sexta </head>
+         </div>
+
+         <!-- ============================================================ -->
+         <!-- Vision 7                                                      -->
+         <!-- ============================================================ -->
+         <div>
+            <p>
+               <eventName ref="#prophecy_7">
+                  <gap reason="first letter obmission"/>septima<ex>m</ex> vidit sub
+                  <persName ref="#king_Darius">dario</persName> &#46; de ang<ex>e</ex>lo
+                  q<ex>ui</ex><lb/> eu<ex>m</ex> de lacu leonu<ex>m</ex>
+                  lib<ex>er</ex>avit &#46; u<ex>bi</ex>
+                  <ex>preter</ex> volunta<lb/>te
+                  <persName ref="#king_Darius">regis</persName> positus fu<ex>er</ex>at &#46;
+                  <ex>quia</ex> decreto
+
+                  <!-- VAR 17: K "principi" / Vat "principum" -->
+                  <app>
+                     <lem wit="#K">p<ex>ri</ex>ncipi</lem>
+                     <rdg wit="#Vat">principu<ex>m</ex></rdg>
+                  </app>
+
+                  <lb/> invidia dato de peticionib<ex>bus</ex>
+                  <ex>non</ex> faciendis <ex>nisi</ex> a
+                  <persName ref="#king_Darius">rege</persName><lb/>&#46;
+
+                  <!-- VAR 18: K "ter orando in die contradixerat" /
+                               Vat "ter in die orando darium contradixit" -->
+                  <app>
+                     <lem wit="#K">ter orando in die <ex>con</ex>tradixerat</lem>
+                     <rdg wit="#Vat">ter in die orando <persName ref="#king_Darius"
+                           >dariu<ex>m</ex></persName>
+                        <ex>con</ex>tradixit</rdg>
+                  </app>&#46;
+               </eventName>
+            </p>
+         </div>
+
+         <!-- ============================================================ -->
+         <!-- Vision 8                                                      -->
+         <!-- ============================================================ -->
+         <div>
+            <p>
+               <eventName ref="#prophecy_8"> Octava<ex>m</ex> vidit sub
+                  <persName ref="#king_Darius">eodem</persName> &#46;
+                  <persName ref="#archangel_Gabriel">gabriele</persName>
+                  eu<ex>m</ex> c<ex>er</ex>tifican<lb/>te de adventu
+                  <persName ref="#Christus"><ex>christi</ex></persName> &#46; <ex>post</ex>
+
+                  <!-- VAR 19: IXX (K) / LXX (Vat) — key numerical variant -->
+                  <app>
+                     <lem wit="#K">IXX</lem>
+                     <rdg wit="#Vat">LXX</rdg>
+                  </app>
+
+                  ebdomades anno<ex>rum</ex><lb/> lunariu<ex>m</ex> &#46; <ex>et</ex>
+                  captivitate finali
+
+                  <!-- VAR 20: K "futura" / Vat omits -->
+                  <app>
+                     <lem wit="#K">fut<ex>ur</ex>a </lem>
+                     <rdg wit="#Vat"/>
+                  </app>
+
+                  p<ex>er</ex> romanos &#46; post<lb/>
+
+                  <!-- VAR 21: K omits "ad" / Vat has "post ad edificationem" -->
+                  <app>
+                     <lem wit="#K"/>
+                     <rdg wit="#Vat">ad</rdg>
+                  </app>
+
+                  edificatione<ex>m</ex> civitatis p<ex>er</ex>
+                  <persName ref="#governator_Neemia">neemiam</persName>
+                  <ex>et</ex> alios
+
+                  <!-- VAR 22: K ends here / Vat adds "que facta fuit per Vespasianum et Tytum" -->
+                  <app>
+                     <lem wit="#K"/>
+                     <rdg wit="#Vat">que f<ex>a</ex>cta fuit p<ex>er</ex>
+                        <persName>vespasianu<ex>m</ex></persName> et
+                        <persName>tytu<ex>m</ex></persName></rdg>
+                  </app>&#46;
+               </eventName>
+            </p>
+         </div>
+
+         <!-- ============================================================ -->
+         <!-- Rubric: visio septima. octava.                               -->
+         <!-- ============================================================ -->
+         <div>
+            <head type="rubrica">visio septima&#46; octava&#46;</head>
+         </div>
+
+         <!-- ============================================================ -->
+         <!-- Vision 9                                                      -->
+         <!-- ============================================================ -->
+         <div>
+            <p>
+               <eventName ref="#prophecy_9">
+                  <gap reason="omissione della prima lettera"/>nona<ex>m</ex> vidit sub
+                  <persName ref="#king_Cyrus">cyro</persName>&#46;
+
+                  <!-- VAR 23: K "cum ieiunans iuxta" / Vat "qui ieiunans iuxta tygrim" (adds river) -->
+                  <app>
+                     <lem wit="#K">cu<ex>m</ex> ieiunans iuxta</lem>
+                     <rdg wit="#Vat">qui ieiunans iuxta tygrim</rdg>
+                  </app>
+
+                  &#46; <lb/> uidit uirum indutum
+
+                  <!-- VAR 24: balthidi (K) / baltheo (Vat) -->
+                  <app>
+                     <lem wit="#K">balthidi</lem>
+                     <rdg wit="#Vat">baltheo</rdg>
+                  </app>&#46; cu<ex>ius</ex> corpus c<ex>ri</ex>solit<ex>us</ex>&#46;
+                  <lb/>oculi lampades&#46;
+
+                  <!-- VAR 25: facies (K) / facias (Vat) -->
+                  <app>
+                     <lem wit="#K">facies</lem>
+                     <rdg wit="#Vat">facias</rdg>
+                  </app>
+
+                  ut fulgur&#46;
+
+                  <!-- VAR 26: K ends / Vat adds "erat" -->
+                  <app>
+                     <lem wit="#K"/>
+                     <rdg wit="#Vat">erat</rdg>
+                  </app>
+                  <lb/>
+               </eventName>
+            </p>
+         </div>
+
+         <!-- ============================================================ -->
+         <!-- Vision 10                                                     -->
+         <!-- ============================================================ -->
+         <div>
+            <p>
+               <eventName ref="#prophecy_10"> Decima<ex>m</ex>
+
+                  <!-- VAR 27: K "audiuit" / Vat "visionem vidit sub eodem" -->
+                  <app>
+                     <lem wit="#K">audiuit</lem>
+                     <rdg wit="#Vat">visionem vidit sub eode<ex>m</ex></rdg>
+                  </app>
+
+                  cu<ex>m</ex> ide<ex>m</ex> uir de successione regu<ex>m</ex>
+                  <lb/> p<ex>er</ex>sa<ex>rum</ex>&#46; <ex>et</ex>
+
+                  <!-- VAR 28: K omits "ab" / Vat has "et ab alexandro" -->
+                  <app>
+                     <lem wit="#K"/>
+                     <rdg wit="#Vat">ab</rdg>
+                  </app>
+
+                  <persName ref="#king_Alexandro">alexandro</persName> cu<ex>m</ex>
+
+                  <!-- VAR 29: suiis (K) / suis (Vat) -->
+                  <app>
+                     <lem wit="#K">suiis</lem>
+                     <rdg wit="#Vat">suis</rdg>
+                  </app>
+
+                  successorib<ex>us</ex> IIII max<lb/>ime regib<ex>us</ex> egypti <ex>et</ex>
+                  syrie&#46; <ex>et</ex> seuitia
+                  <persName ref="#king_Anthiocus_Epiphanes">antiochi epi<lb/>phanes</persName>&#46;
+                  <ex>et</ex>
+                  <persName ref="#Antichristus">anti<ex>christo</ex></persName>
+                  <ex>per</ex>
+
+                  <!-- VAR 30: K "tempora et tempus" / Vat "tempus et tempora" (reversed order) -->
+                  <app>
+                     <lem wit="#K">temp<ex>or</ex>a <ex>et</ex> tempus</lem>
+                     <rdg wit="#Vat">tempus <ex>et</ex> temp<ex>or</ex>a</rdg>
+                  </app>
+
+                  <ex>et</ex> dimidi<lb/>um temp<ex>or</ex>is regnaturo&#46; eum
+                  certificauit&#46;
+               </eventName>
+            </p>
+         </div>
+
+         <!-- ============================================================ -->
+         <!-- Rubric: visio nona decima                                    -->
+         <!-- ============================================================ -->
+         <div>
+            <head type="rubrica"> visio nona decima &#46;</head>
+         </div>
+
+      </body>
+   </text>
+
+   <!-- ================================================================== -->
+   <!-- standOff: persons and events — preserved exactly from ms. K        -->
+   <!-- ================================================================== -->
+   <standOff>
+      <listPerson>
+         <person xml:id="prophet_Daniel">
+            <persName> Daniel</persName>
+            <listRef>
+               <ref target="https://www.wikidata.org/wiki/Q171724"/>
+            </listRef>
+         </person>
+         <person xml:id="king_Nabucodonosor">
+            <persName>Nabucodonosor</persName>
+            <listRef>
+               <ref target="https://www.wikidata.org/wiki/Q12591"/>
+            </listRef>
+         </person>
+         <person xml:id="Christus">
+            <persName>Christus</persName>
+            <listRef>
+               <ref target="https://www.wikidata.org/wiki/Q302"/>
+            </listRef>
+         </person>
+         <person xml:id="king_Balthasar">
+            <persName>Balthasar</persName>
+            <listRef>
+               <ref target="https://www.wikidata.org/wiki/Q225198"/>
+            </listRef>
+         </person>
+         <person xml:id="king_Alexander">
+            <persName>Alexandro</persName>
+            <listRef>
+               <ref target="https://www.wikidata.org/wiki/Q297657"/>
+            </listRef>
+         </person>
+         <person xml:id="king_Anthiocus_Epiphanes">
+            <persName>Anthiocus Epiphanes</persName>
+            <listRef>
+               <ref target="https://www.wikidata.org/wiki/Q3356"/>
+            </listRef>
+         </person>
+         <person xml:id="king_Cyrus">
+            <persName>Cyrus</persName>
+            <listRef>
+               <ref target="https://www.wikidata.org/wiki/Q8423"/>
+            </listRef>
+         </person>
+         <person xml:id="king_Darius">
+            <persName>Darius</persName>
+            <listRef>
+               <ref target="https://www.wikidata.org/wiki/Q603176"/>
+            </listRef>
+         </person>
+         <person xml:id="archangel_Gabriel">
+            <persName>Gabriel</persName>
+            <listRef>
+               <ref target="https://www.wikidata.org/wiki/Q81989"/>
+            </listRef>
+         </person>
+         <person xml:id="governator_Neemia">
+            <persName>Neemia</persName>
+            <listRef>
+               <ref target="https://www.wikidata.org/wiki/Q1025598"/>
+            </listRef>
+         </person>
+         <person xml:id="Antichristus">
+            <persName>Antichristus</persName>
+            <listRef>
+               <ref target="https://www.wikidata.org/wiki/Q174546"/>
+            </listRef>
+         </person>
+      </listPerson>
+      <listEvent>
+         <event xml:id="prophecy_1_2_3">
+            <eventName> Daniel's first, second and third prophecies </eventName>
+         </event>
+         <event xml:id="prophecy_4">
+            <eventName> Daniel's fourth prophecy </eventName>
+         </event>
+         <event xml:id="prophecy_5">
+            <eventName> Daniel's fifth prophecy </eventName>
+         </event>
+         <event xml:id="prophecy_6">
+            <eventName> Daniel's sixth prophecy </eventName>
+         </event>
+         <event xml:id="prophecy_7">
+            <eventName> Daniel's seventh prophecy </eventName>
+         </event>
+         <event xml:id="prophecy_8">
+            <eventName> Daniel's eight prophecy </eventName>
+         </event>
+         <event xml:id="prophecy_9">
+            <eventName> Daniel's ninth prophecy </eventName>
+         </event>
+         <event xml:id="prophecy_10">
+            <eventName> Daniel's tenth propechy </eventName>
+         </event>
+      </listEvent>
+   </standOff>
+
+</TEI>
