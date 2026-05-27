@@ -1,0 +1,211 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"/>
+        <link rel="shortcut icon" type="image/x-icon" href="resources/images/favicon.ico"/>
+        <link rel="shortcut icon" type="image/png" href="resources/images/favicon-16.png" sizes="16x16"/>
+        <link rel="shortcut icon" type="image/png" href="resources/images/favicon-24.png" sizes="24x24"/>
+        <link rel="shortcut icon" type="image/png" href="resources/images/favicon-32.png" sizes="32x32"/>
+        <link rel="shortcut icon" type="image/png" href="resources/images/favicon-64.png" sizes="64x64"/>
+
+        <title data-template="config:app-title"/>
+        <meta name="description" content="Two-column layout: text left, manuscript image right"/>
+        <meta name="pb-template" content="view.html"/>
+
+        <link rel="stylesheet" href="resources/css/theme.css"/>
+        <script type="module" src="pb-components-bundle.js" data-template="pages:load-components"/>
+
+        <style>
+            /* ── hide built-in side nav on wide screens (we use the grid instead) ── */
+            @media (min-width: 769px) {
+                .toolbar pb-navigation {
+                    display: none;
+                }
+            }
+
+            /* ── two-column grid ── */
+            .content-body {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0;
+                align-items: start;
+                width: 100%;
+            }
+
+            /* ── left: text column ── */
+            .col-text {
+                position: relative;
+                padding: 1.5rem 2rem;
+                border-right: 1px solid #ccc;
+                min-height: calc(100vh - 130px);
+                overflow-y: auto;
+            }
+
+            /* pb-navigation arrows inside the text column */
+            .col-text pb-navigation {
+                position: fixed;
+                bottom: 45%;
+                --paper-fab-background: #35424b;
+                color: white;
+            }
+            .col-text pb-navigation[direction=backward] { left: 20px; }
+            .col-text pb-navigation[direction=forward]  { left: calc(50% - 60px); }
+
+            /* ── right: image column ── */
+            .col-image {
+                position: sticky;
+                top: 130px;                    /* sits below the fixed header */
+                height: calc(100vh - 130px);
+                overflow: auto;
+                background: #1a1510;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem;
+                gap: 0.75rem;
+            }
+
+            .col-image img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                border: 1px solid #3a3020;
+                transform-origin: top center;
+                transition: transform 0.2s ease;
+            }
+
+            .col-image figcaption {
+                font-size: 0.72rem;
+                color: #7a6a50;
+                text-align: center;
+                letter-spacing: 0.04em;
+                line-height: 1.5;
+            }
+
+            /* zoom controls */
+            .zoom-controls {
+                display: flex;
+                gap: 0.4rem;
+                align-items: center;
+            }
+            .zoom-controls button {
+                font-size: 0.8rem;
+                padding: 0.2rem 0.6rem;
+                background: #3a3020;
+                color: #c8b898;
+                border: 1px solid #5a4a30;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+            .zoom-controls button:hover { background: #4a3a28; }
+            .zoom-controls span {
+                font-size: 0.75rem;
+                color: #7a6a50;
+                min-width: 3rem;
+                text-align: center;
+            }
+
+            /* ── collapse to single column on mobile ── */
+            @media (max-width: 769px) {
+                .content-body {
+                    grid-template-columns: 1fr;
+                }
+                .col-image {
+                    position: relative;
+                    top: 0;
+                    height: auto;
+                    min-height: 50vw;
+                }
+                .col-text pb-navigation {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <pb-page data-template="pages:pb-page" unresolved="unresolved">
+            <pb-document id="document1" data-template="pages:pb-document"/>
+            <app-drawer-layout force-narrow="force-narrow">
+                <app-drawer data-template="lib:include" data-template-path="templates/drawer.html"/>
+                <app-header-layout>
+                    <app-header slot="header" reveals="reveals" fixed="fixed" effects="waterfall">
+                        <app-toolbar data-template="lib:include" data-template-path="templates/menu.html"/>
+                        <app-toolbar data-template="lib:include" data-template-path="templates/toolbar.html"/>
+                    </app-header>
+
+                    <pb-drawer toggle="tocToggle" class="toc" emit="toc" subscribe="transcription">
+                        <div class="drawer-content">
+                            <h3>
+                                <pb-i18n key="document.contents">Contents</pb-i18n>
+                            </h3>
+                            <pb-load id="toc" url="api/document/{doc}/contents?target=transcription&amp;icons=true" expand="expand" src="document1" subscribe="toc" load-once="load-once">
+                                <pb-i18n key="dialogs.loading">Loading</pb-i18n>
+                            </pb-load>
+                        </div>
+                    </pb-drawer>
+
+                    <section class="breadcrumbs">
+                        <pb-view id="title-view1" src="document1" xpath="//teiHeader/fileDesc/titleStmt/title[1]" view="single">
+                            <pb-param name="header" value="short"/>
+                        </pb-view>
+                    </section>
+
+                    <!-- ══════════════════════════════════════════════════ -->
+                    <!--  TWO-COLUMN MAIN                                  -->
+                    <!-- ══════════════════════════════════════════════════ -->
+                    <main class="content-body">
+
+                        <!-- LEFT: transcription text -->
+                        <div class="col-text">
+                            <pb-navigation direction="backward" unit="page" emit="transcription" subscribe="transcription">
+                                <paper-fab icon="icons:chevron-left"/>
+                            </pb-navigation>
+
+                            <pb-view id="view1" src="document1" column-separator=".tei-cb" append-footnotes="append-footnotes" subscribe="transcription" emit="transcription"/>
+
+                            <pb-navigation direction="forward" unit="page" emit="transcription" subscribe="transcription">
+                                <paper-fab icon="icons:chevron-right"/>
+                            </pb-navigation>
+                        </div>
+
+                        <!-- RIGHT: manuscript image -->
+                        <div class="col-image">
+                            <div class="zoom-controls">
+                                <button onclick="zoomImg(-0.2)">− zoom</button>
+                                <button onclick="zoomImg(0.2)">+ zoom</button>
+                                <button onclick="zoomImg(0)">reset</button>
+                                <span id="zoom-label">100%</span>
+                            </div>
+
+                            <figure style="margin:0; width:100%;">
+                                <img id="ms-image" src="https://github.com/FriederikeVoit/antidote-group-a/blob/main/peter_of_poitiers/manuscript_k.png?raw=true" alt="Klosterneuburg, Augustiner-Chorherrenstift, Cod. 696 — manuscript page"/>
+                                <figcaption>
+                                    Klosterneuburg, Augustiner-Chorherrenstift, Cod. 696<br/>
+                                    Petrus Pictaviensis, Compendium historiae genealogia Christi
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                    </main>
+                    <!-- ══════════════════════════════════════════════════ -->
+
+                </app-header-layout>
+            </app-drawer-layout>
+        </pb-page>
+
+        <div class="splash"/>
+
+        <script>
+            var _zoomLevel = 1;
+            function zoomImg(delta) {
+                if (delta === 0) { _zoomLevel = 1; }
+                else { _zoomLevel = Math.max(0.3, Math.min(4, _zoomLevel + delta)); }
+                var img = document.getElementById('ms-image');
+                img.style.transform = 'scale(' + _zoomLevel + ')';
+                document.getElementById('zoom-label').textContent =
+                    Math.round(_zoomLevel * 100) + '%';
+            }
+        </script>
+    </body>
+</html>
