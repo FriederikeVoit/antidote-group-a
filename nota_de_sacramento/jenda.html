@@ -1,0 +1,167 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"/>
+    <link rel="shortcut icon" type="image/x-icon" href="resources/images/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-16.png" sizes="16x16"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-24.png" sizes="24x24"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-32.png" sizes="32x32"/>
+    <link rel="shortcut icon" type="image/png" href="resources/images/favicon-64.png" sizes="64x64"/>
+    <title data-template="config:app-title"/>
+    <meta name="description" content="De Sacramento - facsimile + parallel text"/>
+    <meta name="pb-template" content="view.html"/>
+    <link rel="stylesheet" href="resources/css/theme.css"/>
+    <script type="module" src="pb-components-bundle.js" data-template="pages:load-components"/>
+    <style>
+      body {
+        --pb-view-height: calc(100vh - 212px);
+      }
+      .three-column {
+        display: grid;
+        grid-template-columns: 2fr 1.5fr 1.5fr;
+        gap: 2em;
+        width: 100%;
+        max-width: 1600px;
+        padding: 0 24px;
+        box-sizing: border-box;
+        align-items: start;
+      }
+      #facs-panel {
+        height: var(--pb-view-height);
+        overflow-y: auto;
+        border: 1px solid #ddd;
+        background: #f5f5f5;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+      }
+      #facs-img {
+        max-width: 100%;
+        object-fit: contain;
+        display: block;
+      }
+      #view-edition,
+      #view-translation {
+        height: var(--pb-view-height);
+        overflow-y: auto;
+        border-left: 1px solid #e0e0e0;
+        padding-left: 1em;
+      }
+      .content-body {
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+      .content-body pb-navigation {
+        position: fixed;
+        bottom: 45%;
+        --paper-fab-background: #35424b;
+        color: white;
+      }
+      .content-body pb-navigation[direction=backward] { left: 4px; }
+      .content-body pb-navigation[direction=forward]  { right: 4px; }
+      @media (min-width: 769px) {
+        .toolbar pb-navigation { display: none; }
+      }
+      @media (max-width: 900px) {
+        .three-column {
+          grid-template-columns: 1fr;
+        }
+        #facs-panel {
+          display: none;
+        }
+        #view-edition,
+        #view-translation {
+          border-left: none;
+          padding-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <pb-page data-template="pages:pb-page" unresolved="unresolved">
+      <pb-document id="document1" data-template="pages:pb-document"/>
+      <app-drawer-layout force-narrow="force-narrow">
+        <app-drawer data-template="lib:include" data-template-path="templates/drawer.html"/>
+        <app-header-layout>
+          <app-header slot="header" reveals="reveals" fixed="fixed" effects="waterfall">
+            <app-toolbar data-template="lib:include" data-template-path="templates/menu.html"/>
+            <app-toolbar data-template="lib:include" data-template-path="templates/toolbar.html"/>
+          </app-header>
+          <pb-drawer toggle="tocToggle" class="toc" emit="toc" subscribe="transcription">
+            <div class="drawer-content">
+              <h3>
+                                <pb-i18n key="document.contents">Contents</pb-i18n>
+                            </h3>
+              <pb-load id="toc" url="api/document/{doc}/contents?target=transcription&amp;icons=true" expand="expand" src="document1" subscribe="toc" load-once="load-once">
+                <pb-i18n key="dialogs.loading">Loading</pb-i18n>
+              </pb-load>
+            </div>
+          </pb-drawer>
+          <section class="breadcrumbs">
+            <pb-view id="title-view1" src="document1" xpath="//teiHeader/fileDesc/titleStmt/title[1]" view="single">
+              <pb-param name="header" value="short"/>
+            </pb-view>
+          </section>
+          <main class="content-body">
+            <pb-navigation direction="backward" unit="page" emit="transcription" subscribe="transcription">
+              <paper-fab icon="icons:chevron-left"/>
+            </pb-navigation>
+            <div class="three-column">
+
+              <div id="facs-panel">
+                <img id="facs-img" src="" alt="Manuscript facsimile"/>
+              </div>
+
+              <pb-view id="view-edition" src="document1" xpath="//tei:div1[@xml:lang='la']" view="page" column-separator=".tei-cb" append-footnotes="append-footnotes" subscribe="transcription" emit="transcription">
+</pb-view>
+
+<pb-view id="view-translation" src="document1" xpath="//tei:div1[@xml:lang='en']" view="page" append-footnotes="append-footnotes" subscribe="transcription">
+</pb-view>
+
+            </div>
+            <pb-navigation direction="forward" unit="page" emit="transcription" subscribe="transcription">
+              <paper-fab icon="icons:chevron-right"/>
+            </pb-navigation>
+          </main>
+        </app-header-layout>
+      </app-drawer-layout>
+      <pb-popover subscribe="transcription" remote="remote"/>
+    </pb-page>
+    <div class="splash"/>
+    <script>
+      (function() {
+        var BASE = 'https://raw.githubusercontent.com/FriederikeVoit/antidote-group-a/refs/heads/main/nota_de_sacramento/';
+
+        function setFacs(facs) {
+          var img = document.getElementById('facs-img');
+          if (img &amp;&amp; facs) {
+            img.src = BASE + encodeURIComponent(facs);
+          }
+        }
+
+        function checkShadowDOM() {
+          var view = document.getElementById('view-edition');
+          if (!view) { return; }
+          var root = view.shadowRoot || view;
+          var link = root.querySelector('pb-facs-link');
+          if (link) {
+            var facs = link.getAttribute('facs');
+            if (facs) { setFacs(facs); }
+          }
+        }
+
+        ['pb-navigate', 'pb-navigate.transcription'].forEach(function(name) {
+          document.addEventListener(name, function(e) {
+            if (e.detail &amp;&amp; e.detail.facs) { setFacs(e.detail.facs); }
+          });
+        });
+
+        ['pb-update', 'pb-update.transcription'].forEach(function(name) {
+          document.addEventListener(name, function() { checkShadowDOM(); });
+        });
+
+      })();
+    </script>
+  </body>
+</html>
