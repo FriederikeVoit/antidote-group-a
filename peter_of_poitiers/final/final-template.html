@@ -1,0 +1,688 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"/>
+        <link rel="shortcut icon" type="image/x-icon" href="resources/images/favicon.ico"/>
+        <link rel="shortcut icon" type="image/png" href="resources/images/favicon-16.png" sizes="16x16"/>
+        <link rel="shortcut icon" type="image/png" href="resources/images/favicon-24.png" sizes="24x24"/>
+        <link rel="shortcut icon" type="image/png" href="resources/images/favicon-32.png" sizes="32x32"/>
+        <link rel="shortcut icon" type="image/png" href="resources/images/favicon-64.png" sizes="64x64"/>
+
+        <title data-template="config:app-title"/>
+        <meta name="description" content="daniel-template-final"/>
+        <meta name="pb-template" content="view.html"/>
+
+        <link rel="stylesheet" href="resources/css/theme.css"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+<link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&amp;display=swap" rel="stylesheet"/>
+
+
+        <script type="module" src="pb-components-bundle.js" data-template="pages:load-components"/>
+
+
+
+
+<style>
+
+app-header {
+    outline: none;
+    background: #f5f0e6;
+}
+
+app-toolbar {
+    background: #f5f0e6;
+}
+
+.breadcrumbs {
+    background: #f5f0e6;
+}
+
+.breadcrumbs,
+.breadcrumbs pb-view,
+.breadcrumbs pb-view *,
+.breadcrumbs a,
+.breadcrumbs span,
+.breadcrumbs div {
+    font-family: "Eagle Lake", serif !important;
+    font-size: 2rem;
+}
+
+
+pb-page {
+    background: #f5f0e6;
+}
+
+    /* ── hide built-in side nav on wide screens ── */
+
+    @media (min-width: 769px) {
+        .toolbar pb-navigation {
+            display: none;
+        }
+    }
+
+    /* ── three-column grid ── */
+
+    .content-body {
+        display: grid;
+
+        /* timeline | text | image */
+        grid-template-columns: 220px minmax(0, 1fr) minmax(0, 1fr);
+
+        gap: 0;
+        align-items: start;
+        width: 100%;
+        background: #f5f0e6;
+    }
+
+    /* IMPORTANT:
+       allows grid children to shrink properly */
+
+    .content-body &gt; * {
+        min-width: 0;
+    }
+
+    /* ── timeline column ── */
+
+.col-timeline {
+    position: sticky;
+    top: 130px;
+    align-self: start;
+    height: max-content;
+    overflow: visible;
+    border-right: 1px solid #ccc;
+    padding: 1rem;
+    min-width: 0;
+    background: #f5f0e6;
+}
+
+
+.col-timeline::before {
+    content: "Timeline";
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Eagle Lake", serif !important;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    letter-spacing: 0.03em;
+}
+
+.timeline-event img {
+    width: 80px;
+    height: 80px;
+
+    object-fit: cover;   /* KEY: crops instead of stretching */
+    object-position: center;
+
+    border-radius: 4px;  /* optional: slightly rounded */
+    display: block;
+    margin-bottom: 6px;
+}
+
+.timeline-event {
+    position: relative;
+    padding-bottom: 18px;
+}
+
+.timeline-event:nth-of-type(-n+3)::after {
+    content: "";
+    position: absolute;
+
+    left: 16px;
+    bottom: 6px;
+
+    width: 2px;
+    height: 14px;
+
+
+    display: block;
+    background: #000000;
+}
+
+.timeline-event:nth-of-type(-n+3)::before {
+    content: "";
+    position: absolute;
+
+    left: 13px;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #94a3b8;
+}
+
+
+/* ── highlighted timeline target ── */
+
+    .active-event {
+        background-color: yellow;
+        border-radius: 3px;
+}
+    /* ── text column ── */
+
+    .col-text::before {
+    content: "Transcription (K)";
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Eagle Lake", serif !important;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    letter-spacing: 0.03em;
+}
+
+    .col-text {
+        position: relative;
+        padding: 1.5rem 2rem;
+        border-right: 1px solid #ccc;
+        min-height: calc(100vh - 130px);
+        min-width: 0;
+        overflow-y: visible;
+        background: #f5f0e6;
+    }
+
+    /* ── navigation arrows ── */
+
+    .col-text pb-navigation {
+        position: fixed;
+        bottom: 45%;
+        --paper-fab-background: #35424b;
+        color: white;
+    }
+
+    .col-text pb-navigation[direction=backward] {
+        left: 20px;
+    }
+
+    .col-text pb-navigation[direction=forward] {
+        left: calc(50% - 60px);
+    }
+
+    /* ── image column ── */
+
+    .col-image::before {
+    content: "Facsimile (K)";
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Eagle Lake", serif !important;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    letter-spacing: 0.03em;
+    background: #f5f0e6;
+}
+
+.col-image {
+
+    min-width: 0;
+
+    background: #1a1510;
+
+    padding: 0;
+}
+
+
+/* sticky inner wrapper for image column */
+
+.col-image-inner {
+
+    position: sticky;
+
+    top: 130px;
+
+    height: calc(100vh - 130px);
+
+    overflow: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 1rem;
+
+    gap: 0.75rem;
+}
+
+
+
+
+            .col-image img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                border: 1px solid #3a3020;
+                transform-origin: top center;
+                transition: transform 0.2s ease;
+            }
+
+            .col-image figcaption {
+                font-size: 0.72rem;
+                color: #7a6a50;
+                text-align: center;
+                letter-spacing: 0.04em;
+                line-height: 1.5;
+            }
+
+            /* zoom controls */
+            .zoom-controls {
+                display: flex;
+                gap: 0.4rem;
+                align-items: center;
+            }
+            .zoom-controls button {
+                font-size: 0.8rem;
+                padding: 0.2rem 0.6rem;
+                background: #3a3020;
+                color: #c8b898;
+                border: 1px solid #5a4a30;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+            .zoom-controls button:hover { background: #4a3a28; }
+            .zoom-controls span {
+                font-size: 0.75rem;
+                color: #7a6a50;
+                min-width: 3rem;
+                text-align: center;
+            }
+
+            /* ── collapse to single column on mobile ── */
+            @media (max-width: 769px) {
+                .content-body {
+                    grid-template-columns: 1fr;
+                }
+                .col-image {
+                    position: relative;
+                    top: 0;
+                    height: auto;
+                    min-height: 50vw;
+                }
+                .col-text pb-navigation {
+                    display: none;
+                }
+            }
+
+
+
+    /* Metadata sidebar */
+#meta-sidebar {
+    position: fixed;
+    top: 0;
+    right: -380px;
+    width: 360px;
+    height: 100vh;
+    background: #fff;
+    border-left: 1px solid #ddd;
+    box-shadow: -4px 0 16px rgba(0,0,0,0.15);
+    z-index: 9999;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    padding: 2em 1.5em;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+
+#meta-sidebar.open {
+    right: 0;
+}
+
+#meta-sidebar h2 {
+    font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 0.3em;
+    color: #35424b;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.4em;
+}
+
+#meta-sidebar h3 {
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #888;
+    margin-top: 1.4em;
+    margin-bottom: 0.3em;
+}
+
+#meta-sidebar p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    color: #333;
+    margin: 0 0 0.5em 0;
+}
+
+#meta-sidebar .close-btn {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background: none;
+    border: none;
+    font-size: 1.3em;
+    cursor: pointer;
+    color: #666;
+    line-height: 1;
+}
+
+#meta-sidebar .close-btn:hover {
+    color: #000;
+}
+
+#meta-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.2);
+    z-index: 9998;
+}
+
+#meta-overlay.open {
+    display: block;
+}
+
+#meta-toggle-btn {
+    position: fixed;
+    top: 120px;
+    right: 0;
+    z-index: 9997;
+    background: #35424b;
+    color: white;
+    border: none;
+    padding: 0.6em 0.5em;
+    cursor: pointer;
+    font-size: 0.8em;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    letter-spacing: 0.08em;
+    border-radius: 4px 0 0 4px;
+    box-shadow: -2px 2px 6px rgba(0,0,0,0.2);
+}
+
+#meta-toggle-btn:hover {
+    background: #4a5f6e;
+}
+
+</style>
+    </head>
+
+    <body>
+
+        <pb-page data-template="pages:pb-page" unresolved="unresolved">
+
+            <pb-document id="document1" data-template="pages:pb-document"/>
+
+            <app-drawer-layout force-narrow="force-narrow">
+
+                <app-drawer data-template="lib:include" data-template-path="templates/drawer.html"/>
+
+                <app-header-layout>
+
+                    <app-header slot="header" reveals="reveals" fixed="fixed" effects="waterfall">
+
+                        <app-toolbar data-template="lib:include" data-template-path="templates/menu.html"/>
+
+                        <app-toolbar data-template="lib:include" data-template-path="templates/toolbar.html"/>
+
+                    </app-header>
+
+                    <pb-drawer toggle="tocToggle" class="toc" emit="toc" subscribe="transcription">
+
+                        <div class="drawer-content">
+
+                            <h3>
+                                <pb-i18n key="document.contents">
+                                    Contents
+                                </pb-i18n>
+                            </h3>
+
+                            <pb-load id="toc" url="api/document/{doc}/contents?target=transcription&amp;icons=true" expand="expand" src="document1" subscribe="toc" load-once="load-once">
+
+                                <pb-i18n key="dialogs.loading">
+                                    Loading
+                                </pb-i18n>
+
+                            </pb-load>
+
+                        </div>
+                    </pb-drawer>
+
+                    <section class="breadcrumbs">
+
+                        <pb-view id="title-view1" src="document1" xpath="//teiHeader/fileDesc/titleStmt/title[1]" view="single">
+
+                            <pb-param name="header" value="short"/>
+
+                        </pb-view>
+
+                    </section>
+
+                    <!-- MAIN LAYOUT -->
+
+                    <main class="content-body">
+
+                        <!-- TIMELINE COLUMN -->
+
+                        <div class="col-timeline">
+
+                            <div class="timeline-inner">
+
+
+
+<div class="timeline-event">
+<img src="https://github.com/FriederikeVoit/antidote-group-a/blob/main/peter_of_poitiers/image_1.png?raw=true" alt="Klosterneuburg manuscript"/>
+<a href="#prophecy_1_2_3" data-ref="prophecy_1_2_3"> Nabucodonosor II</a>
+<div class="event-meta">605–562 BCE</div>
+                                </div>
+<div class="timeline-event">
+<img src="https://github.com/FriederikeVoit/antidote-group-a/blob/main/peter_of_poitiers/Image_2.png?raw=true" alt="Klosterneuburg manuscript"/>
+<a href="#prophecy_4_5_6" data-ref="prophecy_4_5_6"> Balthasar </a>
+<div class="event-meta">553–539 BCE</div>
+                                </div>
+<div class="timeline-event">
+<img src="https://github.com/FriederikeVoit/antidote-group-a/blob/main/peter_of_poitiers/Image_3.png?raw=true" alt="Klosterneuburg manuscript"/>
+<a href="#prophecy_7_8" data-ref="prophecy_7_8"> Darius </a>
+<div class="event-meta">522–486 BCE</div>
+                                </div>
+<div class="timeline-event">
+<img src="https://github.com/FriederikeVoit/antidote-group-a/blob/main/peter_of_poitiers/Image_4.png?raw=true" alt="Klosterneuburg manuscript"/>
+<a href="#prophecy_9_10" data-ref="prophecy_9_10"> Cyrus </a>
+<div class="event-meta">559–530 BCE</div>
+                                </div>
+</div>
+                        </div>
+
+                        <!-- TEXT COLUMN -->
+
+                        <div class="col-text">
+
+                            <pb-navigation direction="backward" unit="page" emit="transcription" subscribe="transcription">
+
+                                <paper-fab icon="icons:chevron-left"/>
+
+                            </pb-navigation>
+
+
+
+                            <pb-view id="view1" src="document1" column-separator=".tei-cb" append-footnotes="append-footnotes" subscribe="transcription" emit="transcription" view="single"/>
+
+                            <pb-navigation direction="forward" unit="page" emit="transcription" subscribe="transcription">
+
+                                <paper-fab icon="icons:chevron-right"/>
+
+                            </pb-navigation>
+
+                        </div>
+
+                        <!-- IMAGE COLUMN -->
+
+<div class="col-image">
+
+    <div class="col-image-inner">
+
+        <div class="zoom-controls">
+            <button onclick="zoomImg(-0.2)">− zoom</button>
+            <button onclick="zoomImg(0.2)">+ zoom</button>
+            <button onclick="zoomImg(0)">reset</button>
+            <span id="zoom-label">100%</span>
+        </div>
+
+        <figure style="margin:0; width:100%;">
+            <img id="ms-image" src="https://github.com/FriederikeVoit/antidote-group-a/blob/main/peter_of_poitiers/manuscript_k.png?raw=true" alt="Klosterneuburg, Augustiner-Chorherrenstift, Cod. 696 — manuscript page"/>
+
+            <figcaption>
+                Klosterneuburg, Augustiner-Chorherrenstift, Cod. 696<br/>
+                Petrus Pictaviensis, Compendium historiae genealogia Christi
+            </figcaption>
+        </figure>
+
+    </div>
+
+</div>
+
+                    </main>
+
+                </app-header-layout>
+
+            </app-drawer-layout>
+
+            <!-- Info button tab on the right edge -->
+<button id="meta-toggle-btn" onclick="openMetaSidebar()">ℹ Metadata</button>
+
+<!-- Semi-transparent overlay behind the sidebar -->
+<div id="meta-overlay" onclick="closeMetaSidebar()"/>
+
+<!-- The sidebar itself -->
+<div id="meta-sidebar">
+    <button class="close-btn" onclick="closeMetaSidebar()">✕</button>
+
+    <h2>Peter of Poitiers - Compendium historiae</h2>
+
+    <h3>Manuscript witnesses</h3>
+    <p>
+                    <strong>K</strong> — Klosterneuburg, Augustiner-Chorherrenstift, Cod. 696</p>
+    <p>
+                    <strong>V</strong> — Vatican, Bibliotheca Apostolica Vaticana, lat. 3782</p>
+
+    <h3>Transcription</h3>
+    <p>Erica Cattelan</p>
+
+    <h3>TEI encoding</h3>
+    <p>Erica Cattelan</p>
+
+    <h3>Project</h3>
+    <p>Produced within the <strong>ANTIDOTE Workshop</strong>
+                    <br/>
+    Bratislava, 25–29 May 2026</p>
+
+    <h3>Language</h3>
+    <p>Latin</p>
+
+    <h3>Schema</h3>
+    <p>TEI P5, tei_all</p>
+</div>
+
+        </pb-page>
+
+        <div class="splash"/>
+
+        <script>
+            var _zoomLevel = 1;
+            function zoomImg(delta) {
+                if (delta === 0) { _zoomLevel = 1; }
+                else { _zoomLevel = Math.max(0.3, Math.min(4, _zoomLevel + delta)); }
+                var img = document.getElementById('ms-image');
+                img.style.transform = 'scale(' + _zoomLevel + ')';
+                document.getElementById('zoom-label').textContent =
+                    Math.round(_zoomLevel * 100) + '%';
+            }
+        </script>
+        <script>
+            function openMetaSidebar() {
+    document.getElementById('meta-sidebar').classList.add('open');
+    document.getElementById('meta-overlay').classList.add('open');
+}
+
+function closeMetaSidebar() {
+    document.getElementById('meta-sidebar').classList.remove('open');
+    document.getElementById('meta-overlay').classList.remove('open');
+}
+        </script>
+<script>
+window.addEventListener('load', () =&gt; {
+
+    setTimeout(() =&gt; {
+
+        const view = document.getElementById('view1');
+
+        document.querySelectorAll('.timeline-event a')
+            .forEach(link =&gt; {
+
+                const getTargets = (id) =&gt;
+                    view.shadowRoot.querySelectorAll(
+                        `[id="${id}"], [data-id="${id}"], [data-xml-id="${id}"]`
+                    );
+
+                link.addEventListener('mouseenter', () =&gt; {
+
+                    const id = link.getAttribute('href').substring(1);
+                    const targets = getTargets(id);
+
+                    console.log('targets', targets);
+
+                    targets.forEach((target, i) =&gt; {
+
+                        target.style.backgroundColor = '#dbeafe';
+                        target.style.border = '1px solid #93c5fd';
+                        target.style.borderRadius = '4px';
+                        target.style.padding = '0.1rem 0.25rem';
+                        target.style.boxShadow = '0 0 0 1px rgba(147,197,253,0.15)';
+
+                        // only scroll the first match to avoid jitter
+                        if (i === 0) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'center'
+                            });
+                        }
+
+                    });
+
+                });
+
+                link.addEventListener('mouseleave', () =&gt; {
+
+                    const id = link.getAttribute('href').substring(1);
+                    const targets = getTargets(id);
+
+                    targets.forEach(target =&gt; {
+                        target.style.backgroundColor = '';
+                        target.style.border = '';
+                        target.style.borderRadius = '';
+                        target.style.padding = '';
+                        target.style.boxShadow = '';
+                    });
+
+                });
+
+            });
+
+    }, 3000);
+
+});</script>
+
+
+
+    </body>
+</html>
