@@ -1,8 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -75,8 +72,14 @@
             </listWit>
          </sourceDesc>
       </fileDesc>
-   </teiHeader>
 
+
+    <facsimile>
+        <surface>
+            <graphic url="https://manuscripta.at/cantaloupe/iiif/2/AT!5000!AT5000-696!AT5000-696_005v.jpg/info.json"/>
+        </surface>
+    </facsimile>
+   </teiHeader>
    <text>
       <body>
 
@@ -84,8 +87,8 @@
          <!-- Title                                                         -->
          <!-- ============================================================ -->
          <div>
-            <head type="title">
-               <persName ref="#prophet_Daniel"> Daniel </persName></head>
+            <head type="title">Daniel
+                </head>
             <lb/>
          </div>
 
@@ -102,9 +105,10 @@
          <div>
             <p>
                <eventName ref="#prophecy_1_2_3">
+
                   <lb/>
                   <persName ref="#prophet_Daniel">Propthetans Daniel</persName> in Chaldea sub
-                  <persName ref="#king_Nabucodonosor"> Nabucod<ex>onos</ex>or </persName>
+                  <persName ref="#king_Nabucodonosor"> Na<lb/>bucod<ex>onos</ex>or </persName>
                   temp<ex>or</ex>e
 
                   <!-- VAR 1: captivitatis (K) / captivitate babilonie (Vat) -->
@@ -113,16 +117,14 @@
                      <rdg wit="#Vat">captivitate babilo<ex>n</ex>ie</rdg>
                   </app>
 
-                  &#46;vidit X vi<lb/>siones &#46; quarum tres vidit sub
+                  .vidit X vi<lb/>siones . quarum tres vidit sub
                   <persName ref="#king_Nabucodonosor"> Nabucodonosor </persName>
 
                   <!-- VAR 2: Vat adds distribution of visions to kings; K omits entirely -->
                   <app>
                      <lem wit="#K"/>
-                     <rdg wit="#Vat">&#46; quarta sub <persName ref="#king_Balthasar"
-                           >balthasar</persName> duas sub <persName ref="#king_Cyrus"
-                           >cyro</persName> et duas sub <persName ref="#king_Darius"
-                           >Dario</persName> rege p<ex>er</ex>sa<ex>rum</ex></rdg>
+                     <rdg wit="#Vat">. quarta sub <persName ref="#king_Balthasar">balthasar</persName> duas sub <persName ref="#king_Cyrus">cyro</persName> et duas sub <persName ref="#king_Darius">Dario</persName> rege p<ex>er</ex>sa<ex>rum</ex>
+                            </rdg>
                   </app>
 
                   <!-- VAR 3: K "prima de statua quadripartita lapide" /
@@ -135,7 +137,7 @@
                   </app>
 
                   <lb/> sig<ex>nifi</ex>cante quatuor regna a
-                  <persName ref="#Christus">christo</persName> comminuenda &#46;
+                  <persName ref="#Christus">christo</persName> comminuenda .
                   s<ex>e</ex>c<ex>un</ex>dam de <lb/> ang<ex>e</ex>lo qui libavit tres pueros
 
                   <!-- VAR 4: a fornace (K) / de fornace (Vat) -->
@@ -144,21 +146,23 @@
                      <rdg wit="#Vat">de</rdg>
                   </app>
 
-                  fornace &#46; qui n<ex>on</ex>
+                  fornace . qui n<ex>on</ex>
+                        <lb/>
 
                   <!-- VAR 5: K short reading / Vat adds auream, erectam a Nabucodonosor,
                               and the names Anania, Azaria, Misael -->
                   <app>
                      <lem wit="#K">adorav<ex>er</ex>ant statuam campi duran</lem>
                      <rdg wit="#Vat">noluer<ex>unt</ex> adorare statuam auream
-                        erect<ex>am</ex> a <persName ref="#king_Nabucodonosor"
-                           >Nabuc<ex>odonosor</ex></persName> in ca<ex>m</ex>pi duran &#46;
+                        erect<ex>am</ex> a <persName ref="#king_Nabucodonosor">Nabuc<ex>odonosor</ex>
+                                </persName> in ca<ex>m</ex>pi duran .
                         <ex>quorum</ex> no<ex>m</ex>i<ex>n</ex>a <persName>anania</persName>
                         <persName>azaria</persName>
-                        <persName>misael</persName></rdg>
+                        <persName>misael</persName>
+                            </rdg>
                   </app>
 
-                  &#46;
+                  .
 
                   <!-- VAR 6: Tercia (K) / Tertiam (Vat) -->
                   <app>
@@ -166,10 +170,11 @@
                      <rdg wit="#Vat">Tertiam</rdg>
                   </app>
 
-                  que est epistula regis &#46; qua narrat se sub spe<ex>cie</ex> arboris visum
-                  &#46; ob superbiam suam in bovem et leonem &#46; non
-                  corp<ex>or</ex>alit<ex>er</ex> &#46; <ex>sed</ex> alienatione<ex>m</ex>
-                  m<ex>en</ex>tis mutatu<ex>m</ex> &#46; <ex>sed</ex>
+                  que est epistula re<lb/>gis . qua narrat se sub spe<ex>cie</ex> arboris visum
+                  . ob superbi<lb/>am suam in bovem et leonem . non
+                  corp<ex>or</ex>alit<ex>er</ex> . <ex>sed</ex> alienatione<ex>m</ex>
+                        <lb/>
+                  m<ex>en</ex>tis mutatu<ex>m</ex> . <ex>sed</ex>
 
                   <!-- VAR 7: K "post prece" / Vat "prece" (omits "post") -->
                   <app>
@@ -177,7 +182,7 @@
                      <rdg wit="#Vat">p<ex>re</ex>ce</rdg>
                   </app>
 
-                  <persName ref="#prophet_Daniel">Danielis</persName> sanatum &#46;
+                  <persName ref="#prophet_Daniel">Danielis</persName> sanatum .
                </eventName>
             </p>
          </div>
@@ -187,7 +192,7 @@
          <!-- ============================================================ -->
          <div>
             <p>
-               <eventName ref="#prophecy_4">
+               <eventName ref="#prophecy_4_5_6">
 
                   <!-- VAR 8: K "Quartam visionem vidit sub" / Vat "Quartam sub" -->
                   <app>
@@ -196,29 +201,34 @@
                   </app>
 
                   <persName ref="#king_Balthasar">balthasar</persName> de IIII ven<lb/>tis
-                  <ex>idest</ex> angelis <ex>et</ex> IIII bestiis &#46; leone &#46; urso &#46;
-                  pardo &#46; ap<ex>ro</ex>
+                  <ex>idest</ex> angelis <ex>et</ex> IIII bestiis . leone . urso .
+                  pardo . ap<ex>ro</ex>
                   <lb/>
-                  <ex>idest</ex> IIII regnis &#46; <ex>et</ex>
+                  <ex>idest</ex> IIII regnis . <ex>et</ex>
 
                   <!-- VAR 9: K "X cornibus et X regnis de quarta bestia precedentibus" /
                               Vat "in quarta decem cornibus idest decem regnis de quarta bestia procedentibus" -->
                   <app>
                      <lem wit="#K">X cornib<ex>us</ex>
-                        <ex>et</ex> X regnis &#46; de q<ex>ua</ex>rta bes<lb/>tia
-                        p<ex>re</ex>cedentib<ex>us</ex></lem>
-                     <rdg wit="#Vat"><ex>in</ex> q<ex>ua</ex>rta dec<ex>em</ex>
+                        <ex>et</ex> X regnis . de q<ex>ua</ex>rta bes<lb/>tia
+                        p<ex>re</ex>cedentib<ex>us</ex>
+                            </lem>
+                     <rdg wit="#Vat">
+                                <ex>in</ex> q<ex>ua</ex>rta dec<ex>em</ex>
                         cornib<ex>us</ex>
                         <ex>idest</ex> dec<ex>em</ex> regnis de q<ex>ua</ex>rta bestia
-                        p<ex>ro</ex>cedentib<ex>us</ex></rdg>
+                        p<ex>ro</ex>cedentib<ex>us</ex>
+                            </rdg>
                   </app>
 
                   a modico cornu <ex>idest</ex>
-                  <persName ref="#Antichristus">anti<ex>christo</ex></persName>
+                  <persName ref="#Antichristus">anti<ex>christo</ex>
+                        </persName>
 
                   <!-- VAR 10: K "subicIendis positis" / Vat "sumendis prophetis prepositis" -->
                   <app>
-                     <lem wit="#K">subicie<ex>n</ex><lb/>dis &#46; positis</lem>
+                     <lem wit="#K">subicie<ex>n</ex>
+                                <lb/>dis . positis</lem>
                      <rdg wit="#Vat">sumendis prophetis p<ex>re</ex>positis</rdg>
                   </app>
 
@@ -242,7 +252,7 @@
          <!-- ============================================================ -->
          <div>
             <p>
-               <eventName ref="#prophecy_5">
+               <eventName ref="#prophecy_4_5_6">
 
                   <!-- VAR 12: K "Quintam vidit visionem sub" / Vat "Quintam vidit sub" -->
                   <app>
@@ -250,11 +260,12 @@
                      <rdg wit="#Vat">Quinta<ex>m</ex> vidit sub</rdg>
                   </app>
 
-                  eode<ex>m</ex>&#46; de ariete
+                  eode<ex>m</ex>. de ariete
 
                   <!-- VAR 13: K "h[abe]" / Vat "h[abe]nte" -->
                   <app>
-                     <lem wit="#K">h<ex>abe</ex></lem>
+                     <lem wit="#K">h<ex>abe</ex>
+                            </lem>
                      <rdg wit="#Vat">h<ex>abe</ex>nte</rdg>
                   </app>
 
@@ -271,21 +282,22 @@
                   <ex>et</ex> hyrco <lb/>
                   <ex>idest</ex>
                   <persName ref="#king_Alexandro">alexandro</persName> in eum efferato cui
-                  &#46;succrescebant IIII<ex>uor</ex>
+                  .succrescebant IIII<ex>uor</ex>
                   <lb/> cornua <ex>idest</ex>
 
                   <!-- VAR 15: K "successores de quarum uno modicum cornu" /
                                Vat "successores alexandri de quorum unico cornu crescebat" -->
                   <app>
                      <lem wit="#K">successores de qua<ex>rum</ex> uno modicu<ex>m</ex> cornu
-                        <lb/></lem>
-                     <rdg wit="#Vat">successores <persName ref="#king_Alexander"
-                           >alexand<ex>ri</ex></persName> de q<ex>uo</ex>rum unico cornu
+                        <lb/>
+                            </lem>
+                     <rdg wit="#Vat">successores <persName ref="#king_Alexander">alexand<ex>ri</ex>
+                                </persName> de q<ex>uo</ex>rum unico cornu
                         crescebat</rdg>
                   </app>
 
                   <ex>idest</ex>
-                  <persName ref="#king_Anthiocus_Epiphanes">antiochus epiphanes</persName> &#46;
+                  <persName ref="#king_Anthiocus_Epiphanes">antiochus epiphanes</persName> .
                </eventName>
             </p>
          </div>
@@ -295,12 +307,14 @@
          <!-- ============================================================ -->
          <div>
             <p>
-               <eventName ref="#prophecy_6"> Sexta<ex>m</ex> vidit sub eode<ex>m</ex> de
-                  destructione babylonis &#46;<lb/>
+               <eventName ref="#prophecy_4_5_6"> Sexta<ex>m</ex> vidit sub eode<ex>m</ex> de
+                  destructione babylonis .<lb/>
                   <ex>per</ex>
-                  <persName ref="king_Cyrus"> cyru<ex>m</ex></persName>
+                  <persName ref="king_Cyrus"> cyru<ex>m</ex>
+                        </persName>
                   <ex>et</ex>
-                  <persName ref="#king_Darius">dariu<ex>m</ex></persName>&#46;
+                  <persName ref="#king_Darius">dariu<ex>m</ex>
+                        </persName>.
 
                   <!-- VAR 16: K omits "sancta" / Vat adds "sancta" before "exposita" -->
                   <app>
@@ -308,8 +322,9 @@
                      <rdg wit="#Vat">sancta</rdg>
                   </app>
 
-                  exposita sc<ex>ri</ex>ptura in convivio &#46; que co<ex>n</ex><lb/>tinebat
-                  &#46;mane &#46;techel &#46;phares &#46;
+                  exposita sc<ex>ri</ex>ptura in convivio . que co<ex>n</ex>
+                        <lb/>tinebat
+                  .mane .techel .phares .
                </eventName>
             </p>
          </div>
@@ -326,33 +341,36 @@
          <!-- ============================================================ -->
          <div>
             <p>
-               <eventName ref="#prophecy_7">
+               <eventName ref="#prophecy_7_8">
                   <gap reason="first letter obmission"/>septima<ex>m</ex> vidit sub
-                  <persName ref="#king_Darius">dario</persName> &#46; de ang<ex>e</ex>lo
-                  q<ex>ui</ex><lb/> eu<ex>m</ex> de lacu leonu<ex>m</ex>
-                  lib<ex>er</ex>avit &#46; u<ex>bi</ex>
+                  <persName ref="#king_Darius">dario</persName> . de ang<ex>e</ex>lo
+                  q<ex>ui</ex>
+                        <lb/> eu<ex>m</ex> de lacu leonu<ex>m</ex>
+                  lib<ex>er</ex>avit . u<ex>bi</ex>
                   <ex>preter</ex> volunta<lb/>te
-                  <persName ref="#king_Darius">regis</persName> positus fu<ex>er</ex>at &#46;
+                  <persName ref="#king_Darius">regis</persName> positus fu<ex>er</ex>at .
                   <ex>quia</ex> decreto
 
                   <!-- VAR 17: K "principi" / Vat "principum" -->
                   <app>
                      <lem wit="#K">p<ex>ri</ex>ncipi</lem>
-                     <rdg wit="#Vat">principu<ex>m</ex></rdg>
+                     <rdg wit="#Vat">principu<ex>m</ex>
+                            </rdg>
                   </app>
 
                   <lb/> invidia dato de peticionib<ex>bus</ex>
                   <ex>non</ex> faciendis <ex>nisi</ex> a
-                  <persName ref="#king_Darius">rege</persName><lb/>&#46;
+                  <persName ref="#king_Darius">rege</persName>
+                        <lb/>.
 
                   <!-- VAR 18: K "ter orando in die contradixerat" /
                                Vat "ter in die orando darium contradixit" -->
                   <app>
                      <lem wit="#K">ter orando in die <ex>con</ex>tradixerat</lem>
-                     <rdg wit="#Vat">ter in die orando <persName ref="#king_Darius"
-                           >dariu<ex>m</ex></persName>
+                     <rdg wit="#Vat">ter in die orando <persName ref="#king_Darius">dariu<ex>m</ex>
+                                </persName>
                         <ex>con</ex>tradixit</rdg>
-                  </app>&#46;
+                  </app>.
                </eventName>
             </p>
          </div>
@@ -362,11 +380,13 @@
          <!-- ============================================================ -->
          <div>
             <p>
-               <eventName ref="#prophecy_8"> Octava<ex>m</ex> vidit sub
-                  <persName ref="#king_Darius">eodem</persName> &#46;
+               <eventName ref="#prophecy_7_8"> Octava<ex>m</ex> vidit sub
+                  <persName ref="#king_Darius">eodem</persName> .
                   <persName ref="#archangel_Gabriel">gabriele</persName>
                   eu<ex>m</ex> c<ex>er</ex>tifican<lb/>te de adventu
-                  <persName ref="#Christus"><ex>christi</ex></persName> &#46; <ex>post</ex>
+                  <persName ref="#Christus">
+                            <ex>christi</ex>
+                        </persName> . <ex>post</ex>
 
                   <!-- VAR 19: IXX (K) / LXX (Vat) — key numerical variant -->
                   <app>
@@ -374,7 +394,8 @@
                      <rdg wit="#Vat">LXX</rdg>
                   </app>
 
-                  ebdomades anno<ex>rum</ex><lb/> lunariu<ex>m</ex> &#46; <ex>et</ex>
+                  ebdomades anno<ex>rum</ex>
+                        <lb/> lunariu<ex>m</ex> . <ex>et</ex>
                   captivitate finali
 
                   <!-- VAR 20: K "futura" / Vat omits -->
@@ -383,7 +404,7 @@
                      <rdg wit="#Vat"/>
                   </app>
 
-                  p<ex>er</ex> romanos &#46; post<lb/>
+                  p<ex>er</ex> romanos . post<lb/>
 
                   <!-- VAR 21: K omits "ad" / Vat has "post ad edificationem" -->
                   <app>
@@ -399,9 +420,12 @@
                   <app>
                      <lem wit="#K"/>
                      <rdg wit="#Vat">que f<ex>a</ex>cta fuit p<ex>er</ex>
-                        <persName>vespasianu<ex>m</ex></persName> et
-                        <persName>tytu<ex>m</ex></persName></rdg>
-                  </app>&#46;
+                        <persName>vespasianu<ex>m</ex>
+                                </persName> et
+                        <persName>tytu<ex>m</ex>
+                                </persName>
+                            </rdg>
+                  </app>.
                </eventName>
             </p>
          </div>
@@ -410,7 +434,7 @@
          <!-- Rubric: visio septima. octava.                               -->
          <!-- ============================================================ -->
          <div>
-            <head type="rubrica">visio septima&#46; octava&#46;</head>
+            <head type="rubrica">visio septima. octava.</head>
          </div>
 
          <!-- ============================================================ -->
@@ -418,9 +442,9 @@
          <!-- ============================================================ -->
          <div>
             <p>
-               <eventName ref="#prophecy_9">
+               <eventName ref="#prophecy_9_10">
                   <gap reason="omissione della prima lettera"/>nona<ex>m</ex> vidit sub
-                  <persName ref="#king_Cyrus">cyro</persName>&#46;
+                  <persName ref="#king_Cyrus">cyro</persName>.
 
                   <!-- VAR 23: K "cum ieiunans iuxta" / Vat "qui ieiunans iuxta tygrim" (adds river) -->
                   <app>
@@ -428,14 +452,14 @@
                      <rdg wit="#Vat">qui ieiunans iuxta tygrim</rdg>
                   </app>
 
-                  &#46; <lb/> uidit uirum indutum
+                  . <lb/> uidit uirum indutum
 
                   <!-- VAR 24: balthidi (K) / baltheo (Vat) -->
                   <app>
                      <lem wit="#K">balthidi</lem>
                      <rdg wit="#Vat">baltheo</rdg>
-                  </app>&#46; cu<ex>ius</ex> corpus c<ex>ri</ex>solit<ex>us</ex>&#46;
-                  <lb/>oculi lampades&#46;
+                  </app>. cu<ex>ius</ex> corpus c<ex>ri</ex>solit<ex>us</ex>.
+                  <lb/>oculi lampades.
 
                   <!-- VAR 25: facies (K) / facias (Vat) -->
                   <app>
@@ -443,7 +467,7 @@
                      <rdg wit="#Vat">facias</rdg>
                   </app>
 
-                  ut fulgur&#46;
+                  ut fulgur.
 
                   <!-- VAR 26: K ends / Vat adds "erat" -->
                   <app>
@@ -460,16 +484,17 @@
          <!-- ============================================================ -->
          <div>
             <p>
-               <eventName ref="#prophecy_10"> Decima<ex>m</ex>
+               <eventName ref="#prophecy_9_10"> Decima<ex>m</ex>
 
                   <!-- VAR 27: K "audiuit" / Vat "visionem vidit sub eodem" -->
                   <app>
                      <lem wit="#K">audiuit</lem>
-                     <rdg wit="#Vat">visionem vidit sub eode<ex>m</ex></rdg>
+                     <rdg wit="#Vat">visionem vidit sub eode<ex>m</ex>
+                            </rdg>
                   </app>
 
                   cu<ex>m</ex> ide<ex>m</ex> uir de successione regu<ex>m</ex>
-                  <lb/> p<ex>er</ex>sa<ex>rum</ex>&#46; <ex>et</ex>
+                  <lb/> p<ex>er</ex>sa<ex>rum</ex>. <ex>et</ex>
 
                   <!-- VAR 28: K omits "ab" / Vat has "et ab alexandro" -->
                   <app>
@@ -486,10 +511,11 @@
                   </app>
 
                   successorib<ex>us</ex> IIII max<lb/>ime regib<ex>us</ex> egypti <ex>et</ex>
-                  syrie&#46; <ex>et</ex> seuitia
-                  <persName ref="#king_Anthiocus_Epiphanes">antiochi epi<lb/>phanes</persName>&#46;
+                  syrie. <ex>et</ex> seuitia
+                  <persName ref="#king_Anthiocus_Epiphanes">antiochi epi<lb/>phanes</persName>.
                   <ex>et</ex>
-                  <persName ref="#Antichristus">anti<ex>christo</ex></persName>
+                  <persName ref="#Antichristus">anti<ex>christo</ex>
+                        </persName>
                   <ex>per</ex>
 
                   <!-- VAR 30: K "tempora et tempus" / Vat "tempus et tempora" (reversed order) -->
@@ -498,8 +524,8 @@
                      <rdg wit="#Vat">tempus <ex>et</ex> temp<ex>or</ex>a</rdg>
                   </app>
 
-                  <ex>et</ex> dimidi<lb/>um temp<ex>or</ex>is regnaturo&#46; eum
-                  certificauit&#46;
+                  <ex>et</ex> dimidi<lb/>um temp<ex>or</ex>is regnaturo. eum
+                  certificauit.
                </eventName>
             </p>
          </div>
@@ -508,7 +534,7 @@
          <!-- Rubric: visio nona decima                                    -->
          <!-- ============================================================ -->
          <div>
-            <head type="rubrica"> visio nona decima &#46;</head>
+            <head type="rubrica"> visio nona decima .</head>
          </div>
 
       </body>
@@ -588,28 +614,16 @@
       </listPerson>
       <listEvent>
          <event xml:id="prophecy_1_2_3">
-            <eventName> Daniel's first, second and third prophecies </eventName>
+            <eventName>Nabucodonosor II</eventName>
          </event>
-         <event xml:id="prophecy_4">
-            <eventName> Daniel's fourth prophecy </eventName>
+         <event xml:id="prophecy_4_5_6">
+            <eventName>Balthasar</eventName>
          </event>
-         <event xml:id="prophecy_5">
-            <eventName> Daniel's fifth prophecy </eventName>
+         <event xml:id="prophecy_7_8">
+            <eventName>Darius</eventName>
          </event>
-         <event xml:id="prophecy_6">
-            <eventName> Daniel's sixth prophecy </eventName>
-         </event>
-         <event xml:id="prophecy_7">
-            <eventName> Daniel's seventh prophecy </eventName>
-         </event>
-         <event xml:id="prophecy_8">
-            <eventName> Daniel's eight prophecy </eventName>
-         </event>
-         <event xml:id="prophecy_9">
-            <eventName> Daniel's ninth prophecy </eventName>
-         </event>
-         <event xml:id="prophecy_10">
-            <eventName> Daniel's tenth propechy </eventName>
+         <event xml:id="prophecy_9_10">
+            <eventName>Cyrus</eventName>
          </event>
       </listEvent>
    </standOff>
